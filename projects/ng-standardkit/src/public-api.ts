@@ -1,7 +1,7 @@
-/*
- * Public API Surface of ng-standardkit
- */
+// Main Module
+export * from './standardkit.module';
 
-export * from './lib/ng-standardkit.service';
-export * from './lib/ng-standardkit.component';
-export * from './lib/ng-standardkit.module';
+// Modules
+export * from './components/public-api';
+export * from './directives/public-api';
+export * from './layout/public-api';
