@@ -1,3 +1,6 @@
+| :warning: | PRE-ALPHA |
+|-----------|:----------|
+
 # Standardkit Angular Components
 
 This component library is meant to be used alongside theme + styles. You can use it without, please check sources,
