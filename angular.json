@@ -3,38 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-standardkit": {
+    "standardkit": {
       "projectType": "library",
-      "root": "projects/ng-standardkit",
-      "sourceRoot": "projects/ng-standardkit/src",
+      "root": "projects/standardkit",
+      "sourceRoot": "projects/standardkit/src",
       "prefix": "sk",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng-standardkit/tsconfig.lib.json",
-            "project": "projects/ng-standardkit/ng-package.json"
+            "tsConfig": "projects/standardkit/tsconfig.lib.json",
+            "project": "projects/standardkit/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-standardkit/tsconfig.lib.prod.json"
+              "tsConfig": "projects/standardkit/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-standardkit/src/test.ts",
-            "tsConfig": "projects/ng-standardkit/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-standardkit/karma.conf.js"
+            "main": "projects/standardkit/src/test.ts",
+            "tsConfig": "projects/standardkit/tsconfig.spec.json",
+            "karmaConfig": "projects/standardkit/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-standardkit/tsconfig.lib.json",
-              "projects/ng-standardkit/tsconfig.spec.json"
+              "projects/standardkit/tsconfig.lib.json",
+              "projects/standardkit/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -44,5 +44,5 @@
       }
     }
   },
-  "defaultProject": "ng-standardkit"
+  "defaultProject": "standardkit"
 }

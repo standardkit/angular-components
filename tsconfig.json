@@ -20,9 +20,8 @@
       "dom"
     ],
     "paths": {
-      "ng-standardkit": [
-        "dist/ng-standardkit/ng-standardkit",
-        "dist/ng-standardkit"
+      "standardkit": [
+        "dist/standardkit"
       ]
     }
   },

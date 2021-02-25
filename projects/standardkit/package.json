@@ -1,5 +1,5 @@
 {
-  "name": "ng-standardkit",
+  "name": "@standardkit/angular-components",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^11.0.0",

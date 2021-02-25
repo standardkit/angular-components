@@ -12,7 +12,7 @@ npm install --save @standardkit/angular-components
 ``` 
 or directly using: 
 ```bash
-npm install --save ng-standardkit
+npm install --save standardkit
 ```
 
 ## Development server
