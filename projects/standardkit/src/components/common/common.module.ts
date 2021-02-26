@@ -3,12 +3,20 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { SK_CONFIGURATION, SkConfigurationService } from '../../configuration/configuration.service';
 import { SkConfigurationInterface } from '../../configuration/configuration.interface';
 import { SkAlertComponent } from './alert/alert.component';
+import { SkBadgeComponent } from './badge/badge.component';
+import { SkButtonComponent } from './button/button.component';
+import { SkCardComponent } from './card/card.component';
 import { SkIconComponent } from './icon/icon.component';
+import { SkImageComponent } from './image/image.component';
 import { SkSpinnerComponent } from './spinner/spinner.component';
 
 const COMPONENTS = [
   SkAlertComponent,
+  SkBadgeComponent,
+  SkButtonComponent,
+  SkCardComponent,
   SkIconComponent,
+  SkImageComponent
   SkSpinnerComponent
 ];
 
