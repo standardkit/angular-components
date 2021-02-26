@@ -1,0 +1,19 @@
+<div
+  class="alert"
+  [class.alert--error]="type==='error'"
+  [class.alert--warning]="type==='warning'"
+  [class.alert--success]="type==='success'"
+  [class.alert--info]="type==='info'"
+  [class.alert--neutral]="type==='neutral'">
+
+
+  <span class="alert__icon">
+  <ng-content select="[alert-icon],[slot=alert-icon]"></ng-content>
+  </span>
+
+  <ng-content></ng-content>
+  <ng-container #element>
+    <ng-content select="[alert-dismiss-icon],[slot=alert-dismiss-icon]"></ng-content>
+  </ng-container>
+  <span *ngIf="!element.hasChildNodes()" class="alert__dismiss-icon"></span>
+</div>
