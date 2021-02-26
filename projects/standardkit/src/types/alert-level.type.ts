@@ -1,1 +1,1 @@
-export type AlertLevel = 'error' | 'warning' | 'success' | 'info' | 'neutral';
+export type AlertLevelType = 'error' | 'warning' | 'success' | 'info' | 'neutral';

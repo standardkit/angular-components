@@ -6,12 +6,16 @@
   [class.alert--info]="type==='info'"
   [class.alert--neutral]="type==='neutral'">
 
-
-  <span class="alert__icon">
+  <span #icon class="alert__icon" *ngIf="hasIconContent">
   <ng-content select="[alert-icon],[slot=alert-icon]"></ng-content>
   </span>
 
+  <span *ngIf="!hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)">
+    <sk-icon [type]="type"></sk-icon>
+  </span>
+
   <ng-content></ng-content>
+
   <ng-container #element>
     <ng-content select="[alert-dismiss-icon],[slot=alert-dismiss-icon]"></ng-content>
   </ng-container>
