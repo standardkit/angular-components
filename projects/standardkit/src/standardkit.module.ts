@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
-import { ComponentsModule } from './components/components.module';
+import { SkComponentsModule } from './components/components.module';
 
 const MODULES = [
-  ComponentsModule
+  SkComponentsModule
 ];
 
 @NgModule({
-  imports: [],
-  declarations: [],
+  imports: MODULES,
   exports: MODULES
 })
 export class StandardkitModule {

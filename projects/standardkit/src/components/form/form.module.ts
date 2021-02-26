@@ -10,5 +10,5 @@ const COMPONENTS = [
   declarations: COMPONENTS,
   exports: COMPONENTS
 })
-export class FormsModule {
+export class SkFormModule {
 }

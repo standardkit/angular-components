@@ -1,5 +1,5 @@
 // Module
-export * from './forms.module';
+export * from './form.module';
 
 // Components
 export * from './button/button.component';

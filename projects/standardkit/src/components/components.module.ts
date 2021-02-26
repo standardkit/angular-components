@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from './forms/forms.module';
+import { SkCommonModule } from './common/common.module';
+import { SkFormModule } from './form/form.module';
+import { SkGridModule } from './grid/grid.module';
+import { SkLayoutModule } from './layout/layout.module';
+import { SkTableModule } from './table/table.module';
+import { SkTypographyModule } from './typography/typography.module';
 
 const MODULES = [
-  FormsModule
+  SkCommonModule,
+  SkFormModule,
+  SkGridModule,
+  SkLayoutModule,
+  SkTableModule,
+  SkTypographyModule
 ];
 
 @NgModule({
-  imports: [],
-  declarations: [],
+  imports: MODULES,
   exports: MODULES
 })
-export class ComponentsModule {
+export class SkComponentsModule {
 }
