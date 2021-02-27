@@ -6,6 +6,7 @@ import { SkAlertComponent } from './alert/alert.component';
 import { SkBadgeComponent } from './badge/badge.component';
 import { SkButtonComponent } from './button/button.component';
 import { SkCardComponent } from './card/card.component';
+import { SkCodeBlockComponent } from './code-block/code-block.component';
 import { SkIconComponent } from './icon/icon.component';
 import { SkImageComponent } from './image/image.component';
 import { SkSpinnerComponent } from './spinner/spinner.component';
@@ -15,6 +16,7 @@ const COMPONENTS = [
   SkBadgeComponent,
   SkButtonComponent,
   SkCardComponent,
+  SkCodeBlockComponent,
   SkIconComponent,
   SkImageComponent
   SkSpinnerComponent
