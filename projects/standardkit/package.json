@@ -1,13 +1,14 @@
 {
   "name": "@standardkit/angular-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular Components the StandardKit Design & Component System",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/standardkit/angular-components.git"
   },
   "keywords": [
-    "angular", "standardkit"
+    "angular",
+    "standardkit"
   ],
   "author": "Coen Mooij <coenmooij@gmail.com>",
   "license": "Unlicense",

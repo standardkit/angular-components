@@ -1,10 +1,10 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { SkConfigurationService } from '../../../configurations/configuration.service';
 import { AlertLevelType } from '../../../types/alert-level.type';
 
 @Component({
   selector: 'sk-alert',
-  templateUrl: 'alert.component.html'
+  templateUrl: './alert.component.html'
 })
 export class SkAlertComponent implements AfterViewInit, OnChanges {
   @ViewChild('icon') iconReference!: ElementRef;

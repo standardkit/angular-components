@@ -6,13 +6,13 @@ import { AlertLevelType } from '../../../types/alert-level.type';
 
 @Component({
   selector: 'sk-icon',
-  templateUrl: 'icon.component.html'
+  templateUrl: './icon.component.html'
 })
 export class SkIconComponent {
   @Input() class!: string;
   @Input() prefix!: string;
   @Input() icon!: string;
-  @Input() type!: AlertLevelType;
+  @Input() type!: AlertLevelType | string;
 
   protected configuration!: SkIconSetConfiguration;
 
