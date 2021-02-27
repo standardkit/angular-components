@@ -1,6 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { SkComponentsModule } from './components/components.module';
-import { IconSetInterface } from './interfaces/icon-set.interface';
+import { SK_CONFIGURATION, SkConfigurationService } from './configurations/configuration.service';
+import { SkConfigurationInterface } from './interfaces/configuration.interface';
 
 const MODULES = [
   SkComponentsModule
@@ -12,10 +13,10 @@ const MODULES = [
 })
 export class StandardKitModule {
 
-  static withIcons(iconSet: string | IconSetInterface): ModuleWithProviders<StandardKitModule> {
+  static withConfiguration(configuration: SkConfigurationInterface): ModuleWithProviders<StandardKitModule> {
     return {
       ngModule: StandardKitModule,
-      providers: SkComponentsModule.withIcons(iconSet).providers
+      providers: [SkConfigurationService, {provide: SK_CONFIGURATION, useValue: configuration}]
     };
   }
 }

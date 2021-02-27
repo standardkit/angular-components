@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { IconSets } from '../../configurations/icon-sets';
-import { SK_ICON_SET } from '../../injection-tokens/icon-set.injection-token';
-import { IconSetInterface } from '../../interfaces/icon-set.interface';
+import { SK_CONFIGURATION, SkConfigurationService } from '../../configurations/configuration.service';
+import { SkConfigurationInterface } from '../../interfaces/configuration.interface';
 import { SkAlertComponent } from './alert/alert.component';
 import { SkIconComponent } from './icon/icon.component';
 import { SkSpinnerComponent } from './spinner/spinner.component';
@@ -21,17 +20,10 @@ const COMPONENTS = [
   exports: COMPONENTS
 })
 export class SkCommonModule {
-  static withIcons(iconSet: string | IconSetInterface): ModuleWithProviders<SkCommonModule> {
+  static withConfiguration(configuration: SkConfigurationInterface): ModuleWithProviders<SkCommonModule> {
     return {
       ngModule: SkCommonModule,
-      providers: [{
-        provide: SK_ICON_SET,
-        useValue: typeof iconSet === 'string' ? this.getConfiguration(iconSet) : iconSet
-      }]
+      providers: [SkConfigurationService, {provide: SK_CONFIGURATION, useValue: configuration}]
     };
-  }
-
-  static getConfiguration(name: string): IconSetInterface {
-    return IconSets.find(iconSet => iconSet.name === name) ?? {class: '', prefix: '', name: ''};
   }
 }

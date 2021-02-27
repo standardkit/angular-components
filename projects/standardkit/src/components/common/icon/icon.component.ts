@@ -1,6 +1,7 @@
-import { Component, Inject, Input } from '@angular/core';
-import { SK_ICON_SET } from '../../../injection-tokens/icon-set.injection-token';
-import { IconSetInterface } from '../../../interfaces/icon-set.interface';
+import { Component, Input } from '@angular/core';
+import { SkConfigurationService } from '../../../configurations/configuration.service';
+import { emptyIconSet, SkIconSets } from '../../../configurations/icon-sets.configuration';
+import { SkIconSetConfiguration } from '../../../interfaces/icon-set.interface';
 import { AlertLevelType } from '../../../types/alert-level.type';
 
 @Component({
@@ -13,23 +14,34 @@ export class SkIconComponent {
   @Input() icon!: string;
   @Input() type!: AlertLevelType;
 
-  constructor(@Inject(SK_ICON_SET) private iconSet: IconSetInterface) {
+  protected configuration!: SkIconSetConfiguration;
+
+  constructor(private configurationService: SkConfigurationService) {
+    const configuration = configurationService.get().iconSet;
+    this.configuration = this.mapConfiguration(configuration);
   }
 
-  // TODO Something with mapped icons for alert types // We have it
-  // TODO FINISH this
   get classes(): string {
-    const baseClass = this.class ?? this.iconSet.class ?? '';
-    const prefix = this.prefix ?? this.iconSet.prefix ?? '';
+    const baseClass = this.class ?? this.configuration.class;
+    const prefix = this.prefix ?? this.configuration.prefix;
+    const icon = this.icon ?? this.getFromType() ?? '';
 
-    // Get icon
-    const icon = this.icon ?? this.type ? this.getFromType() : '';
-    return '';
+    return `${baseClass} ${prefix}${icon}`;
   }
 
-  private getFromType(): string {
-    // this.type = this.type;
-    // TODO : Implement
-    return '';
+  private mapConfiguration(configuration?: string | SkIconSetConfiguration): SkIconSetConfiguration {
+    switch (typeof configuration) {
+      case 'object':
+        return configuration;
+      case 'string':
+        return SkIconSets.find(set => set.name === configuration) ?? emptyIconSet;
+      default:
+        return emptyIconSet;
+    }
+  }
+
+  private getFromType(): string | undefined {
+    // @ts-ignore
+    return this.configuration?.map[this.type];
   }
 }

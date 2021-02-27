@@ -1,8 +1,8 @@
-import { IconMapInterface } from './icon-map.interface';
+import { SkIconMapInterface } from './icon-map.interface';
 
-export interface IconSetInterface {
+export interface SkIconSetConfiguration {
   name: string;
   class: string;
   prefix: string;
-  map?: IconMapInterface;
+  map?: SkIconMapInterface;
 }
