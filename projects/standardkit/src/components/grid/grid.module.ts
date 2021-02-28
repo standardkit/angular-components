@@ -5,5 +5,5 @@ import { NgModule } from '@angular/core';
   declarations: [],
   exports: []
 })
-export class LayoutModule {
+export class SkGridModule {
 }

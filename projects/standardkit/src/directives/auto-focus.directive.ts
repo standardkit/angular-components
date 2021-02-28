@@ -22,7 +22,7 @@ export class AutoFocusDirective implements AfterContentInit, OnChanges {
     }
   }
 
-  private focus(): void {
+  protected focus(): void {
     if (this.skAutoFocus) {
       setTimeout(() => {
         this.element.nativeElement.focus();
