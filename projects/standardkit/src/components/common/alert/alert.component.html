@@ -11,7 +11,7 @@
   </span>
 
   <span *ngIf="!hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)" class="alert__icon">
-    <sk-icon [type]="type"></sk-icon>
+    <sk-icon [icon]="icon" [type]="type"></sk-icon>
   </span>
 
   <ng-content></ng-content>
@@ -23,6 +23,6 @@
   <span
     *ngIf="!hasDismissContent && (isDismissable || isDismissable === undefined && defaultIsDismissable)"
     class="alert__dismiss">
-    <sk-icon type="close"></sk-icon>
+    <sk-icon [icon]="dismissIcon" type="close"></sk-icon>
   </span>
 </div>

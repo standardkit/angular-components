@@ -1,47 +1,63 @@
-import { Component, Input } from '@angular/core';
-import { SkConfigurationService } from '../../../configurations/configuration.service';
-import { emptyIconSet, SkIconSets } from '../../../configurations/icon-sets.configuration';
-import { SkIconSetConfiguration } from '../../../interfaces/icon-set.interface';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { SkConfigurationInterface } from '../../../configuration/configuration.interface';
+import { SkConfigurationService } from '../../../configuration/configuration.service';
+import { SkIconMapConfiguration } from '../../../configuration/icon-map.configuration';
+import { SkIconMapPresets } from '../../../configuration/icon-map.presets';
+import { SkIconSetPresets } from '../../../configuration/icon-set.presets';
 import { AlertLevelType } from '../../../types/alert-level.type';
 
 @Component({
   selector: 'sk-icon',
   templateUrl: './icon.component.html'
 })
-export class SkIconComponent {
+export class SkIconComponent implements OnInit, OnChanges {
   @Input() class!: string;
   @Input() prefix!: string;
-  @Input() icon!: string;
   @Input() type!: AlertLevelType | string;
+  @Input() icon!: string;
 
-  protected configuration!: SkIconSetConfiguration;
+  /** Configurable */
+  defaultClass?: string;
+  map: SkIconMapConfiguration = {};
+
+  /** Render */
+  baseClass!: string;
+  iconClass!: string;
 
   constructor(private configurationService: SkConfigurationService) {
-    const configuration = configurationService.get().iconSet;
-    this.configuration = this.mapConfiguration(configuration);
+    this.cascade(configurationService.get());
   }
 
-  get classes(): string {
-    const baseClass = this.class ?? this.configuration.class;
-    const prefix = this.prefix ?? this.configuration.prefix;
-    const icon = this.icon ?? this.getFromType() ?? '';
-
-    return `${baseClass} ${prefix}${icon}`;
+  ngOnInit(): void {
+    this.calculate();
   }
 
-  private mapConfiguration(configuration?: string | SkIconSetConfiguration): SkIconSetConfiguration {
-    switch (typeof configuration) {
-      case 'object':
-        return configuration;
-      case 'string':
-        return SkIconSets.find(set => set.name === configuration) ?? emptyIconSet;
-      default:
-        return emptyIconSet;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.icon && !changes.icon.isFirstChange() || changes.class && !changes.class.isFirstChange()) {
+      this.calculate();
     }
   }
 
-  private getFromType(): string | undefined {
-    // @ts-ignore
-    return this.configuration?.map[this.type];
+  calculate(): void {
+    this.baseClass = this.class ?? this.defaultClass;
+    this.iconClass = this.icon ?? this.getIconFromType() ?? '';
+  }
+
+  private cascade(configuration: SkConfigurationInterface): void {
+    this.defaultClass = configuration.iconClass ?? this.getClassFromSet(configuration.iconSet);
+
+    Object.assign(this.map, this.getMapFromSet(configuration.iconSet), configuration.iconMap);
+  }
+
+  private getIconFromType(): string | undefined {
+    return this.map[this.type];
+  }
+
+  private getClassFromSet(iconSet: string | undefined): string {
+    return iconSet ? SkIconSetPresets[iconSet] : '';
+  }
+
+  private getMapFromSet(iconSet: string | undefined): SkIconMapConfiguration {
+    return iconSet ? SkIconMapPresets[iconSet] : {};
   }
 }
