@@ -1,10 +1,10 @@
 <div
   class="alert"
-  [class.alert--error]="type==='error'"
-  [class.alert--warning]="type==='warning'"
-  [class.alert--success]="type==='success'"
-  [class.alert--info]="type==='info'"
-  [class.alert--neutral]="type==='neutral'">
+  [class.alert--error]="type === 'error'"
+  [class.alert--warning]="type === 'warning'"
+  [class.alert--success]="type === 'success'"
+  [class.alert--info]="type === 'info'"
+  [class.alert--neutral]="type === 'neutral'">
 
   <span #icon class="alert__icon" *ngIf="hasIconContent">
     <ng-content select="[icon],[alert-icon],[slot=icon]"></ng-content>
