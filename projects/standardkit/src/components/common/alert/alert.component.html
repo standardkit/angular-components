@@ -1,0 +1,28 @@
+<div
+  class="alert"
+  [class.alert--error]="type === 'error'"
+  [class.alert--warning]="type === 'warning'"
+  [class.alert--success]="type === 'success'"
+  [class.alert--info]="type === 'info'"
+  [class.alert--neutral]="type === 'neutral'">
+
+  <span #icon class="alert__icon" *ngIf="hasIconContent">
+    <ng-content select="[icon],[alert-icon],[slot=icon]"></ng-content>
+  </span>
+
+  <span *ngIf="!hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)" class="alert__icon">
+    <sk-icon [icon]="icon" [type]="type"></sk-icon>
+  </span>
+
+  <ng-content></ng-content>
+
+  <span #dismiss class="alert__dismiss" *ngIf="hasIconContent">
+    <ng-content select="[dismiss],[alert-dismiss],[slot=dismiss]"></ng-content>
+  </span>
+
+  <span
+    *ngIf="!hasDismissContent && (isDismissable || isDismissable === undefined && defaultIsDismissable)"
+    class="alert__dismiss">
+    <sk-icon [icon]="dismissIcon" type="close"></sk-icon>
+  </span>
+</div>
