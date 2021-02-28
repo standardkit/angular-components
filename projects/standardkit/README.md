@@ -1,24 +1,48 @@
-# NgStandardkit
+| :warning: | PRE-ALPHA |
+|-----------|:----------|
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.9.
+# @standardkit/angular-components
 
-## Code scaffolding
+Install normally.
 
-Run `ng generate component component-name --project standardkit` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project standardkit`.
-> Note: Don't forget to add `--project standardkit` or else it will be added to the default project in your `angular.json` file. 
+```bash
+npm i -s @standardkit/angular-components
+```
 
-## Build
+Also use styles & themes to make it look good.
 
-Run `ng build standardkit` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm i -s @standardkit/themes
+```
 
-## Publishing
+```bash
+npm i -s @standardkit/styles
+```
 
-After building your library with `ng build standardkit`, go to the dist folder `cd dist/standardkit` and run `npm publish`.
+## Usage
 
-## Running unit tests
+Import the StandardKit module into your angular project.
 
-Run `ng test standardkit` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+@NgModule({
+  imports: [
+    StandardKitModule.forRoot({
+      iconSet: 'font-awesome', // For example
+      iconMap: {error: 'times-circle', close: 'time'},
+      alert: {hasIcon: true, isDismissable: true} // For example
+    })
+  ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+}
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Then import the modules you need where you need them.
+
+It uses a system of Cascading Configuration so by default it works, 
+but you can override almost everything with more specific configuration.
+
+check https://docs.standardkit.io for more information.
