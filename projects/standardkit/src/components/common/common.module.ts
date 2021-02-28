@@ -4,6 +4,7 @@ import { SK_CONFIGURATION, SkConfigurationService } from '../../configuration/co
 import { SkConfigurationInterface } from '../../configuration/configuration.interface';
 import { SkAlertComponent } from './alert/alert.component';
 import { SkBadgeComponent } from './badge/badge.component';
+import { SkButtonGroupComponent } from './button-group/button-group.component';
 import { SkButtonComponent } from './button/button.component';
 import { SkCardComponent } from './card/card.component';
 import { SkCodeBlockComponent } from './code-block/code-block.component';
@@ -15,6 +16,7 @@ const COMPONENTS = [
   SkAlertComponent,
   SkBadgeComponent,
   SkButtonComponent,
+  SkButtonGroupComponent,
   SkCardComponent,
   SkCodeBlockComponent,
   SkIconComponent,
