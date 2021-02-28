@@ -20,7 +20,7 @@ const COMPONENTS = [
   SkCardComponent,
   SkCodeBlockComponent,
   SkIconComponent,
-  SkImageComponent
+  SkImageComponent,
   SkSpinnerComponent
 ];
 
