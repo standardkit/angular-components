@@ -8,7 +8,7 @@ import { AlertLevelType } from '../../../types/alert-level.type';
 
 @Component({
   selector: 'sk-icon',
-  templateUrl: './icon.component.html'
+  templateUrl: 'icon.component.html'
 })
 export class SkIconComponent implements OnInit, OnChanges {
   @Input() class!: string;

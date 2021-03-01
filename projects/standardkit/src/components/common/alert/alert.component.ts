@@ -1,26 +1,28 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { SkConfigurationService } from '../../../configuration/configuration.service';
 import { AlertLevelType } from '../../../types/alert-level.type';
 
 @Component({
   selector: 'sk-alert',
-  templateUrl: './alert.component.html'
+  templateUrl: 'alert.component.html'
 })
 export class SkAlertComponent implements AfterViewInit {
   @ViewChild('icon') iconReference!: ElementRef;
   @ViewChild('dismiss') dismissReference!: ElementRef;
 
-  @Input() type: AlertLevelType | string = 'error';
+  @Input() type: AlertLevelType | string = 'info';
   @Input() hasIcon!: boolean;
   @Input() isDismissable!: boolean;
   @Input() icon!: string;
   @Input() dismissIcon!: string;
 
-  hasIconContent = false;
-  hasDismissContent = false;
+  @Output() dismiss: EventEmitter<void> = new EventEmitter<void>();
 
   defaultHasIcon = false;
   defaultIsDismissable = false;
+
+  hasIconContent = false;
+  hasDismissContent = false;
 
   constructor(private configurationService: SkConfigurationService) {
     const configuration = configurationService.get();
@@ -31,5 +33,9 @@ export class SkAlertComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.hasIconContent = !!this.iconReference?.nativeElement.hasChildNodes();
     this.hasDismissContent = !!this.dismissReference?.nativeElement.hasChildNodes();
+  }
+
+  onDismiss(): void {
+    this.dismiss.emit();
   }
 }
