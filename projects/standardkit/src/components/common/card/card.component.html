@@ -1,0 +1,17 @@
+<div class="sk-card">
+  <div class="sk-card__image" #image *ngIf="hasImageContent">
+    <ng-content select="[sk-card-image]"></ng-content>
+  </div>
+
+  <div class="sk-card__header" #header *ngIf="hasHeaderContent">
+    <ng-content select="[sk-card-header]"></ng-content>
+  </div>
+
+  <div class="sk-card__content">
+    <ng-content select="[sk-card-content]"></ng-content>
+  </div>
+
+  <div class="sk-card__footer" #footer *ngIf="hasFooterContent">
+    <ng-content select="[sk-card-footer]"></ng-content>
+  </div>
+</div>
