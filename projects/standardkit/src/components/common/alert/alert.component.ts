@@ -12,14 +12,14 @@ export class SkAlertComponent implements AfterViewInit {
 
   @Input() type: AlertLevelType | string = 'info';
   @Input() hasIcon!: boolean;
-  @Input() isDismissable!: boolean;
+  @Input() dismissable!: boolean;
   @Input() icon!: string;
   @Input() dismissIcon!: string;
 
   @Output() dismiss: EventEmitter<void> = new EventEmitter<void>();
 
   defaultHasIcon = false;
-  defaultIsDismissable = false;
+  defaultDismissable = false;
 
   hasIconContent = false;
   hasDismissContent = false;
@@ -27,7 +27,7 @@ export class SkAlertComponent implements AfterViewInit {
   constructor(private configurationService: SkConfigurationService) {
     const configuration = configurationService.get();
     this.defaultHasIcon = !!configuration?.alert?.hasIcon;
-    this.defaultIsDismissable = !!configuration?.alert?.isDismissable;
+    this.defaultDismissable = !!configuration?.alert?.dismissable;
   }
 
   ngAfterViewInit(): void {
