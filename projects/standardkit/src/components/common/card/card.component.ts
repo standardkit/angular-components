@@ -5,9 +5,9 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: 'card.component.html'
 })
 export class SkCardComponent implements AfterViewInit {
-  @ViewChild('footer') footerRef!: ElementRef;
-  @ViewChild('image') imageRef!: ElementRef;
-  @ViewChild('header') headerRef!: ElementRef;
+  @ViewChild('footer') footerRef?: ElementRef;
+  @ViewChild('image') imageRef?: ElementRef;
+  @ViewChild('header') headerRef?: ElementRef;
 
   hasImageContent = false;
   hasHeaderContent = false;

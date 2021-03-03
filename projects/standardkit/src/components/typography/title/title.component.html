@@ -1,25 +1,25 @@
 <ng-container [ngSwitch]="heading">
-  <h1 *ngSwitchCase="1" class="title {{ !!type ? 'title-' + type : '' }}">
+  <h1 *ngSwitchCase="1" class="title" [ngClass]="type ? 'title-' + type : undefined">
     <ng-content></ng-content>
   </h1>
 
-  <h2 *ngSwitchCase="2" class="title {{ !!type ? 'title-' + type : '' }}">
+  <h2 *ngSwitchCase="2" class="title" [ngClass]="type ? 'title-' + type : undefined">
     <ng-content></ng-content>
   </h2>
 
-  <h3 *ngSwitchCase="3" class="title {{ !!type ? 'title-' + type : '' }}">
+  <h3 *ngSwitchCase="3" class="title" [ngClass]="type ? 'title-' + type : undefined">
     <ng-content></ng-content>
   </h3>
 
-  <h4 *ngSwitchCase="4" class="title {{ !!type ? 'title-' + type : '' }}">
+  <h4 *ngSwitchCase="4" class="title" [ngClass]="type ? 'title-' + type : undefined">
     <ng-content></ng-content>
   </h4>
 
-  <h5 *ngSwitchCase="5" class="title {{ !!type ? 'title-' + type : '' }}">
+  <h5 *ngSwitchCase="5" class="title" [ngClass]="type ? 'title-' + type : undefined">
     <ng-content></ng-content>
   </h5>
 
-  <h6 *ngSwitchCase="6" class="title {{ !!type ? 'title-' + type : '' }}">
+  <h6 *ngSwitchCase="6" class="title" [ngClass]="type ? 'title-' + type : undefined">
     <ng-content></ng-content>
   </h6>
 </ng-container>
