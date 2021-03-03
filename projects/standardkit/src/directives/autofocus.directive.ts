@@ -1,10 +1,10 @@
 import { AfterContentInit, Directive, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Directive({
-  selector: '[skAutoFocus]'
+  selector: '[skAutofocus]'
 })
 export class SkAutofocusDirective implements AfterContentInit, OnChanges {
-  @Input() skAutoFocus = false;
+  @Input() skAutofocus?: boolean;
 
   loading = true;
 
@@ -23,7 +23,7 @@ export class SkAutofocusDirective implements AfterContentInit, OnChanges {
   }
 
   protected focus(): void {
-    if (this.skAutoFocus) {
+    if (this.skAutofocus) {
       setTimeout(() => {
         this.element.nativeElement.focus();
       }, 0);

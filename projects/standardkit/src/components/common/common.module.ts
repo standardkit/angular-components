@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { SK_CONFIGURATION, SkConfigurationService } from '../../configuration/configuration.service';
 import { SkConfigurationInterface } from '../../configuration/configuration.interface';
+import { DirectivesModule } from '../../directives/directives.module';
 import { SkAlertComponent } from './alert/alert.component';
 import { SkBadgeComponent } from './badge/badge.component';
 import { SkButtonGroupComponent } from './button-group/button-group.component';
@@ -25,9 +26,10 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+        DirectivesModule
+    ],
   declarations: COMPONENTS,
   exports: COMPONENTS
 })

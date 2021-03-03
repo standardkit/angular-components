@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { SkAutofocusDirective } from './autofocus.directive';
 import { SkInputDirective } from './input.directive';
+import { SkPaddingDirective } from './padding.directive';
 
 const DIRECTIVES = [
   SkAutofocusDirective,
-  SkInputDirective
+  SkInputDirective,
+  SkPaddingDirective
 ];
 
 @NgModule({
