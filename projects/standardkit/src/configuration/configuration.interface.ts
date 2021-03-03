@@ -30,9 +30,17 @@ interface ContentSize {
   contentSize?: SizeType | string;
 }
 
+interface Fill {
+  fill?: FillType | string;
+}
+
 interface Corner {
   corner?: CornerType | string;
   cornerRadius?: SizeType | string;
+}
+
+interface Elevation {
+  elevation?: SizeType | string;
 }
 
 type SizeConfiguration = Size | Density | ContentSize;
@@ -106,24 +114,34 @@ export interface SkConfigurationInterface {
   span?: { highlight?: HighlightType | string; } | Case;
 
   // Forms
-  form?: FormConfiguration | Corner;
-  formField?: FormConfiguration | Corner | {
+  form?: FormConfiguration | Corner | Elevation;
+  formField?: FormConfiguration | Corner | Elevation | {
     fullWidthUntil?: boolean; labelInline?: boolean;
     labelOffset?: number; labelColumns?: number;
     fieldOffset?: number; fieldColumns?: number;
   };
   label?: FormConfiguration;
-  input?: FormConfiguration | Corner;
-  select?: FormConfiguration | Corner;
-  textarea?: FormConfiguration | Corner | { rows?: number; };
+  input?: FormConfiguration | Corner | Elevation;
+  select?: FormConfiguration | Corner | Elevation;
+  textarea?: FormConfiguration | Corner | Elevation | { rows?: number; };
   formError?: FormConfiguration;
-  toggle?: FormConfiguration;
+  toggle?: FormConfiguration | Elevation;
   range?: SizeConfiguration | FullWidth;
+  checkbox?: SizeConfiguration | Corner | Elevation;
+  radio?: SizeConfiguration | Corner | Elevation;
+  inputGroup?: FormConfiguration | Corner | Elevation;
+  datePicker?: FormConfiguration | Corner | Elevation;
+  colorPicker?: FormConfiguration | Corner | Elevation;
+  autocomplete?: SizeConfiguration | Corner | Elevation;
 
   // Tables
 
   // Components
   alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string };
   badge?: { position?: PositionType; };
-  button?: Case | Density;
+  button?: SizeConfiguration | FullWidth | Case | Elevation | Corner | Fill | { type?: string; };
+  loadButton?: SizeConfiguration | FullWidth | Case | Elevation | Corner | Fill | { type?: string; };
+  buttonGroup?: SizeConfiguration | FullWidth | Case | Elevation | Corner | Fill | { type?: string; };
+  progressBar?: SizeConfiguration | Case | Elevation | Corner | Fill | { mode?: string; };
+  image?: {};
 }
