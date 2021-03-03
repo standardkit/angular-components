@@ -1,7 +1,7 @@
 <div
   class="alert {{ !!type ? 'type--' + type : '' }}"
-  [attr.skPadding]="padding ? defaultPadding : undefined"
-  [attr.skFullWidth]="fullWidth ? defaultFullWidth : undefined">
+  skPadding="{{ padding ? defaultPadding : undefined }}"
+  skFullWidth="{{ fullWidth ? defaultFullWidth : undefined }}">
 
   <span #icon class="alert__icon{{ alignIcon ? ' alert__icon--' + alignIcon : '' }}" *ngIf="hasIconContent">
     <ng-content select="[icon],[alert-icon],[slot=icon]"></ng-content>
