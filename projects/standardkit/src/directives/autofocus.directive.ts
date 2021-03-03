@@ -3,7 +3,7 @@ import { AfterContentInit, Directive, ElementRef, Input, OnChanges, SimpleChange
 @Directive({
   selector: '[skAutoFocus]'
 })
-export class AutoFocusDirective implements AfterContentInit, OnChanges {
+export class SkAutofocusDirective implements AfterContentInit, OnChanges {
   @Input() skAutoFocus = false;
 
   loading = true;
