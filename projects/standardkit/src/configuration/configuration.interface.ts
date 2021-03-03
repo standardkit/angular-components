@@ -81,17 +81,14 @@ export interface SkConfigurationInterface {
     info?: string;
     success?: string;
 
-    errorBackground?: string; // Cascades from error
-    warningBackground?: string; // Cascades from warning
-    infoBackground?: string;
-    successBackground?: string;
-
     rangeInput?: string;
 
-    inputError?: string;
-    inputWarning?: string;
-    inputInfo?: string;
-    inputSuccess?: string;
+    form?: {
+      error?: string;
+      warning?: string;
+      info?: string;
+      success?: string;
+    }
   };
 
   notification?: {
