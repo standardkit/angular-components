@@ -10,7 +10,7 @@ import { SizeType } from '../types/size.type';
 import { VerticalPositionType } from '../types/vertical-position.type';
 import { SkIconMapConfiguration } from './icon-map.configuration';
 
-interface Density {
+interface Padding {
   density?: SizeType | string;
 }
 
@@ -26,10 +26,6 @@ interface Size {
   size?: SizeType | string;
 }
 
-interface ContentSize {
-  contentSize?: SizeType | string;
-}
-
 interface Fill {
   fill?: FillType | string;
 }
@@ -43,7 +39,11 @@ interface Elevation {
   elevation?: SizeType | string;
 }
 
-type SizeConfiguration = Size | Density | ContentSize;
+interface Margin {
+  margin?: SizeType | string;
+}
+
+type SizeConfiguration = Size | Padding | Margin;
 type FormConfiguration = SizeConfiguration | Case | FullWidth;
 
 export interface SkConfigurationInterface {
@@ -58,9 +58,9 @@ export interface SkConfigurationInterface {
   elevation?: SizeType | string;
   fill?: FillType | string;
 
-  size?: SizeType | string; // Cascades to density & content size
-  density?: SizeType | string;
-  contentSize?: SizeType | string;
+  size?: SizeType | string;
+  padding?: SizeType | string;
+  margin?: SizeType | string;
 
   borderPosition?: BorderPositionType | string;
   borderSize?: SizeType | string;
@@ -97,9 +97,9 @@ export interface SkConfigurationInterface {
   };
 
   // Grid
-  container?: { fullWidthUntil: BreakpointType | string; } | Density | FullWidth;
-  column?: { horizontalGrow?: boolean; verticalGrow?: boolean; } | Density;
-  row?: { verticalAlign?: VerticalPositionType | string; } | Density;
+  container?: { fullWidthUntil: BreakpointType | string; } | Padding | FullWidth;
+  column?: { horizontalGrow?: boolean; verticalGrow?: boolean; } | Padding;
+  row?: { verticalAlign?: VerticalPositionType | string; } | Padding;
 
   // Layout
   // sidebar?: { fullWidthUntil: BreakpointType | string; };
