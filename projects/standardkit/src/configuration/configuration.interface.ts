@@ -11,7 +11,7 @@ import { VerticalPositionType } from '../types/vertical-position.type';
 import { SkIconMapConfiguration } from './icon-map.configuration';
 
 interface Padding {
-  density?: SizeType | string;
+  padding?: SizeType | string;
 }
 
 interface Case {
