@@ -43,6 +43,10 @@ interface Margin {
   margin?: SizeType | string;
 }
 
+interface Extendable {
+  [key: string]: string;
+}
+
 type SizeConfiguration = Size & Padding & Margin;
 type FormConfiguration = SizeConfiguration & Case & FullWidth;
 
@@ -75,21 +79,15 @@ export interface SkConfigurationInterface {
     background?: string;
     border?: string;
     highlight?: string;
-
-    error?: string;
-    warning?: string;
-    info?: string;
-    success?: string;
-
     rangeInput?: string;
 
-    form?: {
+    alert?: {
       error?: string;
       warning?: string;
       info?: string;
       success?: string;
-    }
-  } & { [key: string]: string };
+    } | Extendable;
+  } | Extendable;
 
   notification?: {
     displayDuration?: number; // Milliseconds
