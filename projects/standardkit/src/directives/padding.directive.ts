@@ -5,10 +5,10 @@ import { SizeType } from '../types/size.type';
   selector: '[skPadding]'
 })
 export class SkPaddingDirective {
-  @Input() value?: SizeType | string;
+  @Input() skPadding?: SizeType | string;
 
   @HostBinding('class')
   get class(): string {
-    return this.value ? 'padding--' + this.value : '';
+    return this.skPadding ? 'padding--' + this.skPadding : '';
   }
 }

@@ -4,10 +4,6 @@ import { Directive, HostBinding, Input } from '@angular/core';
   selector: '[skFullWidth]'
 })
 export class SkFullWidthDirective {
-  @Input() value?: boolean;
-
-  @HostBinding('class')
-  get class(): string {
-    return this.value ? 'full-width' : '';
-  }
+  @HostBinding('class.full-width')
+  @Input() skFullWidth?: boolean;
 }
