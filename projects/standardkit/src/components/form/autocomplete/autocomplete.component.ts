@@ -4,5 +4,5 @@ import { Component } from '@angular/core';
   selector: 'sk-autocomplete',
   templateUrl: 'autocomplete.component.html'
 })
-export class AutocompleteComponent {
+export class SkAutocompleteComponent {
 }
