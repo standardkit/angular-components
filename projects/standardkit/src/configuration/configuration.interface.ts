@@ -106,7 +106,7 @@ export interface SkConfigurationInterface {
   title?: Case & SizeConfiguration;
   subtitle?: Case & SizeConfiguration;
   paragraph?: SizeConfiguration;
-  span?: { highlight?: HighlightType | string; } & Case;
+  highlight?: { type?: HighlightType | string; } & Case;
 
   // Forms
   form?: FormConfiguration & Corner & Elevation;
