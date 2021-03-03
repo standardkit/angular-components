@@ -89,7 +89,7 @@ export interface SkConfigurationInterface {
       info?: string;
       success?: string;
     }
-  };
+  } & { [key: string]: string };
 
   notification?: {
     displayDuration?: number; // Milliseconds
