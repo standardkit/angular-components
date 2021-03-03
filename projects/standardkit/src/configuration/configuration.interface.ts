@@ -137,7 +137,7 @@ export interface SkConfigurationInterface {
   // Tables
 
   // Components
-  alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string };
+  alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string } | Fill;
   badge?: { position?: PositionType; };
   button?: SizeConfiguration | FullWidth | Case | Elevation | Corner | Fill | { type?: string; };
   loadButton?: SizeConfiguration | FullWidth | Case | Elevation | Corner | Fill | { type?: string; };
