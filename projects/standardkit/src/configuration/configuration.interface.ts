@@ -43,8 +43,8 @@ interface Margin {
   margin?: SizeType | string;
 }
 
-type SizeConfiguration = Size | Padding | Margin;
-type FormConfiguration = SizeConfiguration | Case | FullWidth;
+type SizeConfiguration = Size & Padding & Margin;
+type FormConfiguration = SizeConfiguration & Case & FullWidth;
 
 export interface SkConfigurationInterface {
   // Global
@@ -97,48 +97,48 @@ export interface SkConfigurationInterface {
   };
 
   // Grid
-  container?: { fullWidthUntil: BreakpointType | string; } | Padding | FullWidth;
-  column?: { horizontalGrow?: boolean; verticalGrow?: boolean; } | Padding;
-  row?: { verticalAlign?: VerticalPositionType | string; } | Padding;
+  container?: { fullWidthUntil: BreakpointType | string; } & Padding & FullWidth;
+  column?: { horizontalGrow?: boolean; verticalGrow?: boolean; } & Padding;
+  row?: { verticalAlign?: VerticalPositionType | string; } & Padding;
 
   // Layout
   // sidebar?: { fullWidthUntil: BreakpointType | string; };
 
   // Typography
-  title?: Case | SizeConfiguration;
-  subtitle?: Case | SizeConfiguration;
+  title?: Case & SizeConfiguration;
+  subtitle?: Case & SizeConfiguration;
   paragraph?: SizeConfiguration;
-  span?: { highlight?: HighlightType | string; } | Case;
+  span?: { highlight?: HighlightType | string; } & Case;
 
   // Forms
-  form?: FormConfiguration | Corner | Elevation;
-  formField?: FormConfiguration | Corner | Elevation | {
+  form?: FormConfiguration & Corner & Elevation;
+  formField?: FormConfiguration & Corner & Elevation | {
     fullWidthUntil?: boolean; labelInline?: boolean;
     labelOffset?: number; labelColumns?: number;
     fieldOffset?: number; fieldColumns?: number;
   };
   label?: FormConfiguration;
-  input?: FormConfiguration | Corner | Elevation;
-  select?: FormConfiguration | Corner | Elevation;
-  textarea?: FormConfiguration | Corner | Elevation | { rows?: number; };
+  input?: FormConfiguration & Corner & Elevation;
+  select?: FormConfiguration & Corner & Elevation;
+  textarea?: FormConfiguration & Corner & Elevation & { rows?: number; };
   formError?: FormConfiguration;
-  toggle?: FormConfiguration | Elevation;
-  range?: SizeConfiguration | FullWidth;
-  checkbox?: SizeConfiguration | Corner | Elevation;
-  radio?: SizeConfiguration | Corner | Elevation;
-  inputGroup?: FormConfiguration | Corner | Elevation;
-  datePicker?: FormConfiguration | Corner | Elevation;
-  colorPicker?: FormConfiguration | Corner | Elevation;
-  autocomplete?: SizeConfiguration | Corner | Elevation;
+  toggle?: FormConfiguration & Elevation;
+  range?: SizeConfiguration & FullWidth;
+  checkbox?: SizeConfiguration & Corner & Elevation;
+  radio?: SizeConfiguration & Corner & Elevation;
+  inputGroup?: FormConfiguration & Corner & Elevation;
+  datePicker?: FormConfiguration & Corner & Elevation;
+  colorPicker?: FormConfiguration & Corner & Elevation;
+  autocomplete?: SizeConfiguration & Corner & Elevation;
 
   // Tables
 
   // Components
-  alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string } | Fill;
+  alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string } & Fill;
   badge?: { position?: PositionType; };
-  button?: SizeConfiguration | FullWidth | Case | Elevation | Corner | Fill | { type?: string; };
-  loadButton?: SizeConfiguration | FullWidth | Case | Elevation | Corner | Fill | { type?: string; };
-  buttonGroup?: SizeConfiguration | FullWidth | Case | Elevation | Corner | Fill | { type?: string; };
-  progressBar?: SizeConfiguration | Case | Elevation | Corner | Fill | { mode?: string; };
+  button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
+  loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
+  buttonGroup?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
+  progressBar?: SizeConfiguration & Case & Elevation & Corner & Fill & { mode?: string; };
   image?: {};
 }
