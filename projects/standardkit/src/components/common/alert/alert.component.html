@@ -1,6 +1,8 @@
 <div
   class="alert"
   [ngClass]="type ? 'alert--' + type : undefined"
+  [skFill]="fill ? fill : defaultFill"
+  [skMargin]="margin ? margin : defaultMargin"
   [skPadding]="padding ? padding : defaultPadding"
   [skFullWidth]="fullWidth ? fullWidth : defaultFullWidth">
 

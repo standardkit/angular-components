@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { SkConfigurationService } from '../../../configuration/configuration.service';
 import { AlertLevelType } from '../../../types/alert-level.type';
+import { FillType } from '../../../types/fill.type';
 import { SizeType } from '../../../types/size.type';
 import { VerticalPositionType } from '../../../types/vertical-position.type';
 
@@ -19,6 +20,8 @@ export class SkAlertComponent implements AfterViewInit {
   @Input() alignIcon?: VerticalPositionType | string;
   @Input() dismissIcon?: string;
   @Input() alignDismiss?: VerticalPositionType | string;
+  @Input() fill?: FillType | string;
+  @Input() margin?: SizeType | string;
   @Input() padding?: SizeType | string;
   @Input() fullWidth?: boolean;
 
@@ -26,6 +29,8 @@ export class SkAlertComponent implements AfterViewInit {
 
   defaultHasIcon?: boolean;
   defaultDismissable?: boolean;
+  defaultFill?: FillType | string;
+  defaultMargin?: SizeType | string;
   defaultPadding?: SizeType | string;
   defaultFullWidth?: boolean;
 
@@ -36,6 +41,8 @@ export class SkAlertComponent implements AfterViewInit {
     const configuration = configurationService.get();
     this.defaultHasIcon = configuration?.alert?.hasIcon;
     this.defaultDismissable = configuration?.alert?.dismissable;
+    this.defaultFill = configuration.alert?.fill ?? configuration.fill;
+    this.defaultMargin = configuration.alert?.margin ?? configuration.margin;
     this.defaultPadding = configuration.alert?.padding ?? configuration.padding;
     this.defaultFullWidth = configuration.alert?.fullWidth;
   }
