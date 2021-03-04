@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SkAutofocusDirective } from './autofocus.directive';
 import { SkCaseDirective } from './case.directive';
+import { SkColorDirective } from './color.directive';
 import { SkFillDirective } from './fill.directive';
 import { SkFullWidthDirective } from './full-width.directive';
 import { SkInputDirective } from './input.directive';
@@ -11,6 +12,7 @@ import { SkSizeDirective } from './size.directive';
 const DIRECTIVES = [
   SkAutofocusDirective,
   SkCaseDirective,
+  SkColorDirective,
   SkFillDirective,
   SkFullWidthDirective,
   SkInputDirective,

@@ -80,7 +80,7 @@ export interface SkConfigurationInterface {
     border?: string;
     highlight?: string;
     rangeInput?: string;
-
+    navigation?: string,
     alert?: {
       error?: string;
       warning?: string;
@@ -100,7 +100,7 @@ export interface SkConfigurationInterface {
   row?: { verticalAlign?: VerticalPositionType | string; } & Padding;
 
   // Layout
-  // sidebar?: { fullWidthUntil: BreakpointType | string; };
+  navigationBar?: { color?: string; collapseUntil?: BreakpointType | string; } & SizeConfiguration & Fill & Elevation | Extendable;
 
   // Typography
   title?: Case & SizeConfiguration;

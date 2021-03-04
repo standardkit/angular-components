@@ -1,5 +1,6 @@
 import { Component, HostBinding, Input } from '@angular/core';
 import { CaseType } from '../../../types/case.type';
+import { ColorType } from '../../../types/color.type';
 import { FillType } from '../../../types/fill.type';
 import { SizeType } from '../../../types/size.type';
 
@@ -12,6 +13,7 @@ export class SkNavigationBarComponent {
 
   @Input() padding?: SizeType | string;
   @Input() fill?: FillType | string;
+  @Input() color?: ColorType | string;
   @Input() size?: SizeType | string;
   @Input() case?: CaseType | string;
   @Input() sticky = false;
