@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 export class SkImageComponent {
   @Input() src = '';
   @Input() alt = '';
+
+  // TODO : Think of a content projection solution
 }

@@ -1,0 +1,16 @@
+<div class="dashboard-layout">
+
+  <div class="dashboard-layout__header" [class.dashboard-layout__header--sticky]="sticky">
+    <ng-content select="sk-navigation-bar,[header],[dashboard-layout-header],[slot=header]"></ng-content>
+  </div>
+
+  <main>
+    <div class="dashboard-layout__sidebar">
+      <ng-content select="sk-sidebar,[sidebar],[dashboard-layout-sidebar],[slot=sidebar]"></ng-content>
+    </div>
+
+    <div class="dashboard-layout__content">
+      <ng-content></ng-content>
+    </div>
+  </main>
+</div>

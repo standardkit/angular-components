@@ -1,0 +1,11 @@
+<input
+  class="input"
+  [ngClass]="state ? 'input--' + state : undefined"
+  [attr.placeholder]="placeholder"
+  [attr.required]="required ? 'required' : undefined"
+  [skAutofocus]="focus"
+  [id]="fieldId"
+  [type]="type"
+  [attr.disabled]="disabled ? 'disabled' : undefined"
+  [ngModel]="value"
+  (ngModelChange)="onValueChange($event)">

@@ -1,0 +1,14 @@
+<div class="checkbox">
+  <input
+    type="checkbox"
+    [id]="fieldId"
+    [attr.name]="name"
+    [checked]="value"
+    [attr.required]="required ? 'required' : undefined"
+    (click)="toggle()">
+  <label
+    class="checkbox__label"
+    [for]="fieldId">
+    <ng-content></ng-content>
+  </label>
+</div>

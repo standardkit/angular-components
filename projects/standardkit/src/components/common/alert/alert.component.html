@@ -1,28 +1,35 @@
 <div
   class="alert"
-  [class.alert--error]="type === 'error'"
-  [class.alert--warning]="type === 'warning'"
-  [class.alert--success]="type === 'success'"
-  [class.alert--info]="type === 'info'"
-  [class.alert--neutral]="type === 'neutral'">
+  [ngClass]="type ? 'alert--' + type : undefined"
+  [skFill]="fill ? fill : defaultFill"
+  [skMargin]="margin ? margin : defaultMargin"
+  [skPadding]="padding ? padding : defaultPadding"
+  [skFullWidth]="fullWidth ? fullWidth : defaultFullWidth">
 
-  <span #icon class="alert__icon" *ngIf="hasIconContent">
+  <span *ngIf="!isInitialized || hasIconContent" #icon
+        class="alert__icon" [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : undefined">
     <ng-content select="[icon],[alert-icon],[slot=icon]"></ng-content>
   </span>
 
-  <span *ngIf="!hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)" class="alert__icon">
+  <span *ngIf="isInitialized && !hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)"
+        class="alert__icon" [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : undefined">
     <sk-icon [icon]="icon" [type]="type"></sk-icon>
   </span>
 
-  <ng-content></ng-content>
+  <div class="alert__content">
+    <ng-content></ng-content>
+  </div>
 
-  <span #dismiss class="alert__dismiss" *ngIf="hasIconContent">
+  <span *ngIf="!isInitialized || hasIconContent" (click)="onDismiss()" #dismiss
+        [ngClass]="alignDismiss ? 'alert__dismiss--' + alignDismiss : undefined"
+        class="alert__dismiss">
     <ng-content select="[dismiss],[alert-dismiss],[slot=dismiss]"></ng-content>
   </span>
 
-  <span
-    *ngIf="!hasDismissContent && (isDismissable || isDismissable === undefined && defaultIsDismissable)"
-    class="alert__dismiss">
+  <span *ngIf="isInitialized && !hasDismissContent && (dismissable || dismissable === undefined && defaultDismissable)"
+        class="alert__dismiss"
+        [ngClass]="alignDismiss ? 'alert__dismiss--' + alignDismiss : undefined"
+        (click)="onDismiss()">
     <sk-icon [icon]="dismissIcon" type="close"></sk-icon>
   </span>
 </div>
