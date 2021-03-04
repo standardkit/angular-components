@@ -20,5 +20,5 @@ const DIRECTIVES = [
   declarations: DIRECTIVES,
   exports: DIRECTIVES
 })
-export class DirectivesModule {
+export class SkDirectivesModule {
 }

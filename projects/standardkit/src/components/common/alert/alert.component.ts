@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ContentChild, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { SkConfigurationService } from '../../../configuration/configuration.service';
 import { AlertLevelType } from '../../../types/alert-level.type';
 import { FillType } from '../../../types/fill.type';
@@ -10,8 +10,9 @@ import { VerticalPositionType } from '../../../types/vertical-position.type';
   templateUrl: 'alert.component.html'
 })
 export class SkAlertComponent implements AfterViewInit {
-  @ViewChild('icon') iconReference?: ElementRef;
-  @ViewChild('dismiss') dismissReference?: ElementRef;
+  @ViewChild('icon') iconReference!: ElementRef;
+  @ViewChild('dismiss') dismissReference!: ElementRef;
+  @ContentChild('[icon],[alert-icon],[slot=icon]') iconContent!: ElementRef;
 
   @Input() type: AlertLevelType | string = 'info';
   @Input() hasIcon?: boolean;
@@ -34,6 +35,7 @@ export class SkAlertComponent implements AfterViewInit {
   defaultPadding?: SizeType | string;
   defaultFullWidth?: boolean;
 
+  isInitialized = false;
   hasIconContent = false;
   hasDismissContent = false;
 
@@ -48,8 +50,9 @@ export class SkAlertComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.hasIconContent = !!this.iconReference?.nativeElement.hasChildNodes();
-    this.hasDismissContent = !!this.dismissReference?.nativeElement.hasChildNodes();
+    this.hasIconContent = this.iconReference?.nativeElement.children.length > 0;
+    this.hasDismissContent = this.dismissReference?.nativeElement.children.length > 0;
+    setTimeout(() => this.isInitialized = true, 0);
   }
 
   onDismiss(): void {

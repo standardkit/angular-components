@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { SkBrandComponent } from './brand/brand.component';
 import { SkDashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { SkNavigationBarComponent } from './navigation-bar/navigation-bar.component';
@@ -20,7 +22,10 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-  imports: [],
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   declarations: COMPONENTS,
   exports: COMPONENTS
 })

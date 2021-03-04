@@ -11,18 +11,18 @@ import { AlertLevelType } from '../../../types/alert-level.type';
   templateUrl: 'icon.component.html'
 })
 export class SkIconComponent implements OnInit, OnChanges {
-  @Input() class!: string;
-  @Input() prefix!: string;
-  @Input() type!: AlertLevelType | string;
-  @Input() icon!: string;
+  @Input() class?: string;
+  @Input() prefix?: string;
+  @Input() type?: AlertLevelType | string;
+  @Input() icon?: string;
 
   /** Configurable */
   defaultClass?: string;
   map: SkIconMapConfiguration = {};
 
   /** Render */
-  baseClass!: string;
-  iconClass!: string;
+  baseClass?: string;
+  iconClass?: string;
 
   constructor(private configurationService: SkConfigurationService) {
     this.cascade(configurationService.get());
@@ -40,7 +40,7 @@ export class SkIconComponent implements OnInit, OnChanges {
 
   calculate(): void {
     this.baseClass = this.class ?? this.defaultClass;
-    this.iconClass = this.icon ?? this.getIconFromType() ?? '';
+    this.iconClass = this.icon ?? this.getIconFromType();
   }
 
   private cascade(configuration: SkConfigurationInterface): void {
@@ -50,7 +50,7 @@ export class SkIconComponent implements OnInit, OnChanges {
   }
 
   private getIconFromType(): string | undefined {
-    return this.map[this.type];
+    return this.type ? this.map[this.type] : undefined;
   }
 
   private getClassFromSet(iconSet: string | undefined): string {

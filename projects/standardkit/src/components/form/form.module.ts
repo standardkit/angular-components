@@ -1,4 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { SkDirectivesModule } from '../../directives/directives.module';
 import { SkAutocompleteComponent } from './autocomplete/autocomplete.component';
 import { SkCheckboxComponent } from './checkbox/checkbox.component';
 import { SkDatePickerComponent } from './date-picker/date-picker.component';
@@ -34,7 +37,11 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-  imports: [],
+  imports: [
+    CommonModule,
+    FormsModule,
+    SkDirectivesModule
+  ],
   declarations: COMPONENTS,
   exports: COMPONENTS
 })
