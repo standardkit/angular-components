@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SkDirectivesModule } from '../../directives/directives.module';
+import { SkCommonModule } from '../common/common.module';
 import { SkBrandComponent } from './brand/brand.component';
 import { SkDashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { SkNavigationBarComponent } from './navigation-bar/navigation-bar.component';
@@ -26,7 +27,8 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     RouterModule,
-    SkDirectivesModule
+    SkDirectivesModule,
+    SkCommonModule
   ],
   declarations: COMPONENTS,
   exports: COMPONENTS
