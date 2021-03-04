@@ -1,0 +1,29 @@
+<ng-container [ngSwitch]="heading">
+  <h1 *ngSwitchCase="1" class="navigation-title" [ngClass]="type ? 'navigation-title-' + type : undefined">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </h1>
+
+  <h2 *ngSwitchCase="2" class="navigation-title" [ngClass]="type ? 'navigation-title-' + type : undefined">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </h2>
+
+  <h3 *ngSwitchCase="3" class="navigation-title" [ngClass]="type ? 'navigation-title-' + type : undefined">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </h3>
+
+  <h4 *ngSwitchCase="4" class="navigation-title" [ngClass]="type ? 'navigation-title-' + type : undefined">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </h4>
+
+  <h5 *ngSwitchCase="5" class="navigation-title" [ngClass]="type ? 'navigation-title-' + type : undefined">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </h5>
+
+  <h6 *ngSwitchCase="6" class="navigation-title" [ngClass]="type ? 'navigation-title-' + type : undefined">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </h6>
+</ng-container>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

@@ -1,0 +1,12 @@
+<a class="navigation-item" [routerLink]="route" routerLinkActive="navigation-item--active">
+
+   <span #icon *ngIf="!isInitialized || hasIconContent" class="navigation-item__icon">
+    <ng-content select="sk-icon,[icon],[navigation-item-icon],[slot=icon]"></ng-content>
+  </span>
+
+  <span *ngIf="isInitialized && !hasIconContent && !!icon" class="navigation-item__icon">
+    <sk-icon [icon]="icon"></sk-icon>
+  </span>
+
+  <ng-content></ng-content>
+</a>

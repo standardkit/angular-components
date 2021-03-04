@@ -1,0 +1,7 @@
+<button
+  class="button"
+  [attr.disabled]="disabled ? true : undefined"
+  [type]="isSubmit ? 'submit' : 'button'"
+  (click)="onClick()">
+  <ng-content></ng-content>
+</button>
