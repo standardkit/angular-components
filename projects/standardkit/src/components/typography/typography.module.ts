@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { SkDirectivesModule } from '../../directives/directives.module';
 import { SkHighlightComponent } from './highlight/highlight.component';
 import { SkParagraphComponent } from './paragraph/paragraph.component';
 import { SkSubtitleComponent } from './subtitle/subtitle.component';
@@ -14,7 +15,8 @@ const COMPONENTS = [
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SkDirectivesModule
   ],
   declarations: COMPONENTS,
   exports: COMPONENTS
