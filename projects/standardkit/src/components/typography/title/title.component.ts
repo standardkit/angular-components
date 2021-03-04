@@ -7,7 +7,7 @@ import { SizeType } from '../../../types/size.type';
   templateUrl: 'title.component.html'
 })
 export class SkTitleComponent {
-  @Input() heading: 1 | 2 | 3 | 4 | 5 | 6 = 1;
+  @Input() heading: 1 | 2 | 3 | 4 | 5 | 6 = 2;
   @Input() type!: string;
   @Input() margin?: SizeType | string;
 
