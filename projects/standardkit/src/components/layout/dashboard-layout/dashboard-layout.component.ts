@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { BreakpointType } from '../../../types/breakpoint.type';
 
 @Component({
   selector: 'sk-dashboard-layout',
@@ -6,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SkDashboardLayoutComponent {
   @Input() sticky?: boolean;
+  @Input() collapsedUntil?: BreakpointType | string = 'm';
 }

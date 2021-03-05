@@ -1,4 +1,4 @@
-<div class="dashboard-layout">
+<div class="dashboard-layout" [ngClass]="'dashboard-layout__expand--' + collapsedUntil">
 
   <div class="dashboard-layout__header" [class.dashboard-layout__header--sticky]="sticky">
     <ng-content select="sk-navigation-bar,[header],[dashboard-layout-header],[slot=header]"></ng-content>
