@@ -1,11 +1,11 @@
-<div class="dashboard-layout" [ngClass]="'dashboard-layout__expand--' + collapsedUntil">
+<div [ngClass]="'dashboard-layout__expand--' + collapsedUntil" class="dashboard-layout">
 
-  <div class="dashboard-layout__header" [class.dashboard-layout__header--sticky]="sticky">
+  <div [class.dashboard-layout__header--sticky]="sticky" class="dashboard-layout__header">
     <ng-content select="sk-navigation-bar,[header],[dashboard-layout-header],[slot=header]"></ng-content>
   </div>
 
   <main>
-    <div class="dashboard-layout__sidebar">
+    <div [class.dashboard-layout__sidebar--expanded]="isExpanded" class="dashboard-layout__sidebar">
       <ng-content select="sk-sidebar,[sidebar],[dashboard-layout-sidebar],[slot=sidebar]"></ng-content>
     </div>
 
