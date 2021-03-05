@@ -100,8 +100,7 @@ export interface SkConfigurationInterface {
   row?: { verticalAlign?: VerticalPositionType | string; } & Padding;
 
   // Layout
-  navigationBar?: { sticky?: boolean; color?: string; collapseUntil?: BreakpointType | string; }
-    & SizeConfiguration & Fill & Elevation | Extendable;
+  navigationBar?: { color?: string; } & SizeConfiguration & Fill & Elevation & Extendable;
 
   // Typography
   title?: Case & SizeConfiguration;
