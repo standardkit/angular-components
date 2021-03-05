@@ -12,7 +12,6 @@ import { AlertLevelType } from '../../../types/alert-level.type';
 })
 export class SkIconComponent implements OnInit, OnChanges {
   @Input() class?: string;
-  @Input() prefix?: string;
   @Input() type?: AlertLevelType | string;
   @Input() icon?: string;
 
