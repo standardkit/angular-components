@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SkLayoutModule } from '@standardkit/angular-components';
+import { SkCommonModule, SkLayoutModule } from '@standardkit/angular-components';
 import { StgDashboardLayout } from './dashboard/dashboard.layout';
 
 const LAYOUTS = [
@@ -10,7 +10,8 @@ const LAYOUTS = [
 @NgModule({
   imports: [
     RouterModule,
-    SkLayoutModule
+    SkLayoutModule,
+    SkCommonModule
   ],
   declarations: LAYOUTS,
   exports: LAYOUTS

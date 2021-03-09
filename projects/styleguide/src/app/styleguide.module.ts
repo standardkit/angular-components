@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { StandardKitModule } from '@standardkit/angular-components';
 import { StgLayoutModule } from './layout/layout.module';
 import { StgPagesModule } from './pages/pages.module';
 import { StgRoutingModule } from './routing/routing.module';
@@ -13,7 +14,11 @@ import { StyleguideComponent } from './styleguide.component';
     BrowserModule,
     StgRoutingModule,
     StgPagesModule,
-    StgLayoutModule
+    StgLayoutModule,
+    StandardKitModule.forRoot({
+      iconSet: 'font-awesome',
+      iconMap: {custom: 'bug'},
+    })
   ],
   bootstrap: [
     StyleguideComponent

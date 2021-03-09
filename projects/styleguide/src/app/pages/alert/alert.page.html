@@ -1,0 +1,36 @@
+<sk-title>Alert Component</sk-title>
+<sk-divider></sk-divider>
+
+<sk-alert>I am an alert</sk-alert>
+
+<br>
+
+<sk-alert [hasIcon]="true">I am an alert</sk-alert>
+
+<br>
+
+<sk-alert [hasIcon]="true" type="warning">I am a warning</sk-alert>
+<br>
+<sk-alert [hasIcon]="true" type="error">I am an error</sk-alert>
+<br>
+<sk-alert [hasIcon]="true" type="success">I am a success alert</sk-alert>
+<br>
+<sk-alert [hasIcon]="true" fill="fill" type="success">I am fill fill</sk-alert>
+<br>
+<sk-alert [hasIcon]="true" fill="outline" type="error">I am fill collins</sk-alert>
+<br>
+<sk-alert (dismiss)="visible = false" *ngIf="visible" [dismissable]="true">I am an dismissable</sk-alert>
+<sk-button (skClick)="visible = true" *ngIf="!visible">Give me dismissable notification</sk-button>
+<br>
+<sk-alert alignIcon="middle" [hasIcon]="true">
+  Icon is middle
+  <br>
+  You see?
+</sk-alert>
+<br>
+<sk-alert alignIcon="bottom" [hasIcon]="true">
+  Icon is bottom
+  <br>
+  down there
+</sk-alert>
+<br>

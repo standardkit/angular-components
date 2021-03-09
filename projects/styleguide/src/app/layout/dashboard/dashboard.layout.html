@@ -1,8 +1,20 @@
 <sk-dashboard-layout>
 
-  <sk-navigation-bar>
-    <sk-brand route="">Styleguide</sk-brand>
+  <sk-navigation-bar color="custom">
+    <sk-brand route="/">
+      <sk-image src="/assets/standardkit-icon.png"></sk-image>
+      Styleguide
+    </sk-brand>
   </sk-navigation-bar>
+
+  <sk-sidebar>
+    <sk-navigation>
+      <sk-navigation-item route="overview">Overview</sk-navigation-item>
+      <sk-navigation-item route="alert">Alert</sk-navigation-item>
+    </sk-navigation>
+  </sk-sidebar>
+
+  <router-outlet></router-outlet>
 </sk-dashboard-layout>
 
-<router-outlet></router-outlet>
+
