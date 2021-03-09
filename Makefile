@@ -9,5 +9,3 @@ publish : ; npm publish dist/standardkit --access public
 link : ; cd dist/standardkit && npm link
 
 unlink : ; cd dist/standardkit && npm unlink
-
-stg : ; ng serve --project styleguide

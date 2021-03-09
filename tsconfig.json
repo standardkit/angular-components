@@ -20,8 +20,8 @@
       "dom"
     ],
     "paths": {
-      "standardkit": [
-        "dist/standardkit"
+      "@standardkit/angular-components": [
+        "./projects/standardkit/src/public-api.ts"
       ]
     }
   },

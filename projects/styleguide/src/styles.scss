@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@standardkit/themes/scss/default/theme";
+@import "~@standardkit/themes/scss/default/font";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
+$colors: (
+  custom: hotpink
+);
+
+@import "~@standardkit/styles/scss/style";

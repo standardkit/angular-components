@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RoutingModule } from './routing/routing.module';
+import { StgLayoutModule } from './layout/layout.module';
+import { StgPagesModule } from './pages/pages.module';
+import { StgRoutingModule } from './routing/routing.module';
 import { StyleguideComponent } from './styleguide.component';
 
 @NgModule({
@@ -9,7 +11,9 @@ import { StyleguideComponent } from './styleguide.component';
   ],
   imports: [
     BrowserModule,
-    RoutingModule
+    StgRoutingModule,
+    StgPagesModule,
+    StgLayoutModule
   ],
   bootstrap: [
     StyleguideComponent

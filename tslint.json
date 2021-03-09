@@ -121,6 +121,7 @@
     "component-class-suffix": [
       true,
       "Component",
+      "Layout",
       "Page"
     ],
     "contextual-lifecycle": true,
