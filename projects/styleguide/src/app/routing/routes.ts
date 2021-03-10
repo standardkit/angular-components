@@ -1,4 +1,5 @@
 export const StgRoutes = {
   OVERVIEW: 'overview',
-  ALERT: 'alert'
+  ALERT: 'alert',
+  HIGHLIGHT: 'highlight'
 };

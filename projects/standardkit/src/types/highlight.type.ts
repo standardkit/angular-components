@@ -1,1 +1,1 @@
-export  type HighlightType = 'bold' | 'italic' | 'underline' | 'color';
+export  type HighlightType = 'bold' | 'italic' | 'underline' | 'color' | 'code';
