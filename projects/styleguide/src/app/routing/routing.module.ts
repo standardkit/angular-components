@@ -3,7 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { StgDashboardLayout } from '../layout/dashboard/dashboard.layout';
 import { StgAlertPage } from '../pages/alert/alert.page';
 import { StgHighlightPage } from '../pages/highlight/highlight.page';
+import { StgLinkPage } from '../pages/link/link.page';
 import { StgOverviewPage } from '../pages/overview/overview.page';
+import { StgParagraphPage } from '../pages/paragraph/paragraph.page';
+import { StgSubtitlePage } from '../pages/subtitle/subtitle.page';
+import { StgTitlePage } from '../pages/title/title.page';
 import { StgRoutes } from './routes';
 
 const routes: Routes = [
@@ -13,7 +17,11 @@ const routes: Routes = [
       {path: StgRoutes.OVERVIEW, component: StgOverviewPage},
 
       {path: StgRoutes.ALERT, component: StgAlertPage},
-      {path: StgRoutes.HIGHLIGHT, component: StgHighlightPage}
+      {path: StgRoutes.HIGHLIGHT, component: StgHighlightPage},
+      {path: StgRoutes.LINK, component: StgLinkPage},
+      {path: StgRoutes.PARAGRAPH, component: StgParagraphPage},
+      {path: StgRoutes.SUBTITLE, component: StgSubtitlePage},
+      {path: StgRoutes.TITLE, component: StgTitlePage}
     ]
   }];
 

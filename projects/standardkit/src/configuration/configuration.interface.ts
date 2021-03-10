@@ -141,4 +141,5 @@ export interface SkConfigurationInterface {
   progressBar?: SizeConfiguration & Case & Elevation & Corner & Fill & { mode?: string; };
   image?: {};
   section?: Margin;
+  link?: { color: string };
 }
