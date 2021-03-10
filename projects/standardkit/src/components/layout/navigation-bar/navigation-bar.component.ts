@@ -14,7 +14,7 @@ export class SkNavigationBarComponent {
 
   @Input() padding?: SizeType | string;
   @Input() fill?: FillType | string;
-  @Input() color?: ColorType | string;
+  @Input() type?: ColorType | string;
   @Input() size?: SizeType | string;
   @Input() case?: CaseType | string;
   @Input() sidebarToggleIcon?: string;
