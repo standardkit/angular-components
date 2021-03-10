@@ -1,6 +1,13 @@
 <sk-title heading="1">sk-alert</sk-title>
 <sk-divider></sk-divider>
 
+<div class="alert">
+  <div class="alert__content">
+    I am an alert without using the component
+  </div>
+</div>
+<br>
+
 <sk-alert>I am an alert</sk-alert>
 
 <br>
@@ -22,13 +29,13 @@
 <sk-alert (dismiss)="visible = false" *ngIf="visible" [dismissable]="true">I am an dismissable</sk-alert>
 <sk-button (skClick)="visible = true" *ngIf="!visible">Give me dismissable notification</sk-button>
 <br>
-<sk-alert alignIcon="middle" [hasIcon]="true">
+<sk-alert [hasIcon]="true" alignIcon="middle">
   Icon is middle
   <br>
   You see?
 </sk-alert>
 <br>
-<sk-alert alignIcon="bottom" [hasIcon]="true">
+<sk-alert [hasIcon]="true" alignIcon="bottom">
   Icon is bottom
   <br>
   down there

@@ -1,6 +1,12 @@
-<header [skCase]="case" [skColor]="color" [skFill]="fill" [skPadding]="padding" [skSize]="size" class="navigation-bar">
+<header
+  [ngClass]="type ? 'navigation-bar--' + type : ''"
+  [skFill]="fill"
+  [skCase]="case"
+  [skPadding]="padding"
+  [skSize]="size"
+  class="navigation-bar">
 
-  <span class="navigation-bar__toggle" (click)="onToggleSidebar()">
+  <span (click)="onToggleSidebar()" class="navigation-bar__toggle">
     <sk-icon [attr.icon]="sidebarToggleIcon" type="menu"></sk-icon>
   </span>
 
