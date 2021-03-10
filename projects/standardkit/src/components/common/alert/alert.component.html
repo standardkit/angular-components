@@ -4,7 +4,8 @@
   [skFill]="fill ? fill : defaultFill"
   [skMargin]="margin ? margin : defaultMargin"
   [skPadding]="padding ? padding : defaultPadding"
-  [skFullWidth]="fullWidth ? fullWidth : defaultFullWidth">
+  [skFullWidth]="fullWidth ? fullWidth : defaultFullWidth"
+  [skCorner]="corner ? corner : defaultCorner">
 
   <span *ngIf="!isInitialized || hasIconContent" #icon
         class="alert__icon" [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : ''">

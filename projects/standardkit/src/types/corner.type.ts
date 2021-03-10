@@ -1,1 +1,3 @@
-export type CornerType = 'round' | 'sharp' | 'rounded';
+import { SizeType } from './size.type';
+
+export type CornerType = SizeType | 'round' | 'sharp';

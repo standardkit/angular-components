@@ -32,7 +32,6 @@ interface Fill {
 
 interface Corner {
   corner?: CornerType | string;
-  cornerRadius?: SizeType | string;
 }
 
 interface Elevation {
@@ -70,7 +69,6 @@ export interface SkConfigurationInterface {
   borderSize?: SizeType | string;
 
   corner?: CornerType | string;
-  cornerRadius?: SizeType | string;
 
   colors?: {
     title?: string;
@@ -133,7 +131,7 @@ export interface SkConfigurationInterface {
 
   // Components
   alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string }
-    & Fill & SizeConfiguration & FullWidth;
+    & Fill & SizeConfiguration & FullWidth & Corner;
   badge?: { position?: PositionType; };
   button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
