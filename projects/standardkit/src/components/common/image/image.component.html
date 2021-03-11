@@ -1,1 +1,17 @@
-<img class="image" [src]="src" [alt]="alt">
+<ng-container *ngIf="!isInitialized || hasCaptionContent else image">
+  <figure class="figure">
+    <ng-container *ngTemplateOutlet="image"></ng-container>
+
+    <figcaption #caption>
+      <ng-content select="[caption],[image-caption],[slot=caption]"></ng-content>
+    </figcaption>
+  </figure>
+</ng-container>
+
+<ng-template #image>
+  <img
+    class="image"
+    [src]="src"
+    [alt]="alt"
+    [skCorner]="corner ? corner : defaultCorner">
+</ng-template>

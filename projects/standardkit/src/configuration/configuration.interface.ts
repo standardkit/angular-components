@@ -137,6 +137,6 @@ export interface SkConfigurationInterface {
   loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   buttonGroup?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   progressBar?: SizeConfiguration & Case & Elevation & Corner & Fill & { mode?: string; };
-  image?: {};
+  image?: Corner;
   section?: Margin;
 }
