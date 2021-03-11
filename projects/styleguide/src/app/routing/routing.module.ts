@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StgDashboardLayout } from '../layout/dashboard/dashboard.layout';
 import { StgAlertPage } from '../pages/alert/alert.page';
+import { StgCodeBlockPage } from '../pages/code-block/code-block.page';
 import { StgHighlightPage } from '../pages/highlight/highlight.page';
 import { StgLinkPage } from '../pages/link/link.page';
 import { StgOverviewPage } from '../pages/overview/overview.page';
@@ -17,6 +18,7 @@ const routes: Routes = [
       {path: StgRoutes.OVERVIEW, component: StgOverviewPage},
 
       {path: StgRoutes.ALERT, component: StgAlertPage},
+      {path: StgRoutes.CODE_BLOCK, component: StgCodeBlockPage},
       {path: StgRoutes.HIGHLIGHT, component: StgHighlightPage},
       {path: StgRoutes.LINK, component: StgLinkPage},
       {path: StgRoutes.PARAGRAPH, component: StgParagraphPage},
