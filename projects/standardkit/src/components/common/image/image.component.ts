@@ -11,7 +11,6 @@ export class SkImageComponent implements AfterViewInit {
 
   @Input() src = '';
   @Input() alt = '';
-  @Input() caption?: string;
   @Input() corner?: CornerType | string;
 
   defaultCorner?: CornerType | string;
