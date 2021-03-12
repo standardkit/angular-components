@@ -1,0 +1,14 @@
+<div class="list-item">
+  <span *ngIf="!isInitialized || hasIconContent" #icon
+        class="list-item__icon" [ngClass]="alignIcon ? ' list-item__icon--' + alignIcon : ''">
+    <ng-content select="[sk-list-item-icon],[slot=icon]"></ng-content>
+  </span>
+
+  <div class="list-item__content">
+    <div class="list-item__title" *ngIf="!isInitialized || hasTitleContent" #title>
+      <ng-content select="[sk-list-item-title],[slot=list-item-title]"></ng-content>
+    </div>
+
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -8,6 +8,7 @@ import { StgFigurePage } from './figure/figure.page';
 import { StgHighlightPage } from './highlight/highlight.page';
 import { StgImagePage } from './image/image.page';
 import { StgLinkPage } from './link/link.page';
+import { StgListPage } from './list/list.page';
 import { StgOverviewPage } from './overview/overview.page';
 import { StgParagraphPage } from './paragraph/paragraph.page';
 import { StgSubtitlePage } from './subtitle/subtitle.page';
@@ -20,6 +21,7 @@ const PAGES = [
   StgHighlightPage,
   StgImagePage,
   StgLinkPage,
+  StgListPage,
   StgParagraphPage,
   StgSubtitlePage,
   StgTitlePage,

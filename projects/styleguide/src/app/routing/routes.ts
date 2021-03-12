@@ -6,6 +6,7 @@ export const StgRoutes = {
   HIGHLIGHT: 'highlight',
   IMAGE: 'image',
   LINK: 'link',
+  LIST: 'list',
   PARAGRAPH: 'paragraph',
   SUBTITLE: 'subtitle',
   TITLE: 'title'
