@@ -2,16 +2,16 @@
 <sk-divider></sk-divider>
 
 <sk-figure>
-  <sk-image src="/assets/standardkit-icon.png"></sk-image>
+  <sk-image src="/assets/standardkit-icon.png" slot="image"></sk-image>
 </sk-figure>
 <br>
 <sk-figure>
-  <sk-image src="/assets/standardkit-icon.png"></sk-image>
-  <div figure-caption>I am a caption</div>
+  <sk-image src="/assets/standardkit-icon.png" sk-figure-image></sk-image>
+  <div sk-figure-caption>I am a caption</div>
 </sk-figure>
 <br>
 <sk-figure>
-  <sk-image src="/assets/standardkit-icon.png"></sk-image>
+  <sk-image src="/assets/standardkit-icon.png" slot="image"></sk-image>
   <ng-container slot="caption">
     <sk-title>I am a complex caption</sk-title>
     <sk-paragraph>With a title and a paragraph</sk-paragraph>
@@ -19,6 +19,6 @@
 </sk-figure>
 <br>
 <sk-figure>
-  <sk-image src="/assets/dummy-image.jpg" corner="round"></sk-image>
-  <div caption>I am a caption</div>
+  <sk-image src="/assets/dummy-image.jpg" corner="round" slot="image"></sk-image>
+  <div slot="caption">I am a caption</div>
 </sk-figure>
