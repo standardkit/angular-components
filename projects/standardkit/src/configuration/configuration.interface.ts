@@ -3,6 +3,7 @@ import { BorderPositionType } from '../types/border-position.type';
 import { BreakpointType } from '../types/breakpoint.type';
 import { CaseType } from '../types/case.type';
 import { CornerType } from '../types/corner.type';
+import { ElevationType } from '../types/elevation.type';
 import { FillType } from '../types/fill.type';
 import { HighlightType } from '../types/highlight.type';
 import { PositionType } from '../types/position.type';
@@ -35,7 +36,7 @@ interface Corner {
 }
 
 interface Elevation {
-  elevation?: SizeType | string;
+  elevation?: ElevationType | string;
 }
 
 interface Margin {
@@ -137,6 +138,7 @@ export interface SkConfigurationInterface {
   loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   buttonGroup?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   progressBar?: SizeConfiguration & Case & Elevation & Corner & Fill & { mode?: string; };
-  image?: {};
+  image?: Corner;
   section?: Margin;
+  list?: Elevation & Corner;
 }

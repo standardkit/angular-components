@@ -1,10 +1,10 @@
 <div class="card">
   <div class="card__image" #image *ngIf="hasImageContent">
-    <ng-content select="[image],[card-image],[slot=image]"></ng-content>
+    <ng-content select="sk-image,[sk-card-image],[slot=image]"></ng-content>
   </div>
 
   <div class="card__header" #header *ngIf="hasHeaderContent">
-    <ng-content select="[header],[card-header],[slot=card-header]"></ng-content>
+    <ng-content select="[sk-card-header],[slot=card-header]"></ng-content>
   </div>
 
   <div class="card__content">
@@ -12,6 +12,6 @@
   </div>
 
   <div class="card__footer" #footer *ngIf="hasFooterContent">
-    <ng-content select="[footer],[card-footer],[slot=footer]"></ng-content>
+    <ng-content select="[sk-card-footer],[slot=footer]"></ng-content>
   </div>
 </div>

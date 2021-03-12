@@ -9,7 +9,7 @@
 
   <span *ngIf="!isInitialized || hasIconContent" #icon
         class="alert__icon" [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : ''">
-    <ng-content select="[icon],[alert-icon],[slot=icon]"></ng-content>
+    <ng-content select="[sk-alert-icon],[slot=icon]"></ng-content>
   </span>
 
   <span *ngIf="isInitialized && !hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)"
@@ -24,7 +24,7 @@
   <span *ngIf="!isInitialized || hasIconContent" (click)="onDismiss()" #dismiss
         [ngClass]="alignDismiss ? 'alert__dismiss--' + alignDismiss : ''"
         class="alert__dismiss">
-    <ng-content select="[dismiss],[alert-dismiss],[slot=dismiss]"></ng-content>
+    <ng-content select="[sk-alert-dismiss],[slot=dismiss]"></ng-content>
   </span>
 
   <span *ngIf="isInitialized && !hasDismissContent && (dismissable || dismissable === undefined && defaultDismissable)"

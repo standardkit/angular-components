@@ -11,8 +11,11 @@ import { SkButtonComponent } from './button/button.component';
 import { SkCardComponent } from './card/card.component';
 import { SkCodeBlockComponent } from './code-block/code-block.component';
 import { SkDividerComponent } from './divider/divider.component';
+import { SkFigureComponent } from './figure/figure.component';
 import { SkIconComponent } from './icon/icon.component';
 import { SkImageComponent } from './image/image.component';
+import { SkListItemComponent } from './list-item/list-item.component';
+import { SkListComponent } from './list/list.component';
 import { SkSpinnerComponent } from './spinner/spinner.component';
 
 const COMPONENTS = [
@@ -24,8 +27,11 @@ const COMPONENTS = [
   SkCardComponent,
   SkCodeBlockComponent,
   SkDividerComponent,
+  SkFigureComponent,
   SkIconComponent,
   SkImageComponent,
+  SkListComponent,
+  SkListItemComponent,
   SkSpinnerComponent
 ];
 
