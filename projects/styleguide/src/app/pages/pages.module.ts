@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { SkCommonModule, SkTypographyModule } from '@standardkit/angular-components';
 import { StgAlertPage } from './alert/alert.page';
 import { StgCodeBlockPage } from './code-block/code-block.page';
+import { StgFigurePage } from './figure/figure.page';
 import { StgHighlightPage } from './highlight/highlight.page';
 import { StgImagePage } from './image/image.page';
 import { StgLinkPage } from './link/link.page';
@@ -15,6 +16,7 @@ import { StgTitlePage } from './title/title.page';
 const PAGES = [
   StgAlertPage,
   StgCodeBlockPage,
+  StgFigurePage,
   StgHighlightPage,
   StgImagePage,
   StgLinkPage,
