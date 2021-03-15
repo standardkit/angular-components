@@ -1,5 +1,6 @@
 import { Directive, HostBinding, Input } from '@angular/core';
-import { CornerType } from '@standardkit/angular-components';
+import { CornerType } from '../types/corner.type';
+
 
 @Directive({
   selector: '[skCorner]'
