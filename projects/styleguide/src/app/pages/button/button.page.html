@@ -1,0 +1,82 @@
+<sk-subtitle heading="1">sk-button</sk-subtitle>
+<sk-divider></sk-divider>
+
+<sk-section>
+  <sk-subtitle>HTML</sk-subtitle>
+  <button class="button">
+    Html class=button
+  </button>
+</sk-section>
+
+<sk-section>
+  <sk-subtitle>Default</sk-subtitle>
+  <sk-button>Default button</sk-button>
+</sk-section>
+
+<sk-section>
+  <sk-subtitle>Types</sk-subtitle>
+  <sk-button type="error">Error</sk-button>
+  <sk-button type="warning">Warning</sk-button>
+  <sk-button type="success">Success</sk-button>
+  <sk-button type="info">Info</sk-button>
+  <sk-button type="secondary">Secondary</sk-button>
+  <sk-button type="custom">Custom</sk-button>
+</sk-section>
+
+<sk-section>
+  <sk-subtitle>Fill</sk-subtitle>
+  <sk-button fill="fill">Fill</sk-button>
+  <sk-button fill="plain">Plain</sk-button>
+  <sk-button fill="outline">Outline</sk-button>
+  <sk-button fill="contrast" type="custom">Custom Contrast</sk-button>
+</sk-section>
+
+<sk-section>
+  <sk-subtitle>Disabled</sk-subtitle>
+  <sk-button [disabled]="true">Disabled info</sk-button>
+  <sk-button [disabled]="true" type="error">Disabled error</sk-button>
+  <sk-button [disabled]="true" type="custom">Disabled custom</sk-button>
+  <sk-button [disabled]="true" fill="plain">Disabled plain</sk-button>
+  <sk-button [disabled]="true" fill="outline">Disabled outline</sk-button>
+</sk-section>
+
+<sk-section>
+  <sk-subtitle>Icons & Corners</sk-subtitle>
+  <sk-button corner="sharp">
+    <sk-icon icon="times"></sk-icon>
+  </sk-button>
+  <sk-button corner="xs" type="warning">
+    <sk-icon icon="exclamation-triangle"></sk-icon>
+  </sk-button>
+  <sk-button corner="s">
+    <sk-icon icon="times"></sk-icon>
+  </sk-button>
+  <sk-button corner="m">
+    <sk-icon icon="times"></sk-icon>
+  </sk-button>
+  <sk-button corner="l">
+    <sk-icon icon="times"></sk-icon>
+  </sk-button>
+  <sk-button corner="xl" type="custom">
+    <sk-icon icon="times"></sk-icon>
+  </sk-button>
+  <sk-button corner="round" type="error" fill="outline">
+    <sk-icon icon="times"></sk-icon>
+  </sk-button>
+  <sk-button corner="inverted-leaf" type="success">
+    <sk-icon icon="times"></sk-icon>
+  </sk-button>
+  <sk-button corner="leaf" type="success" fill="plain">
+    <sk-icon icon="times"></sk-icon>
+  </sk-button>
+</sk-section>
+
+<sk-section>
+  <sk-subtitle>Elevation</sk-subtitle>
+  <sk-button elevation="none">No shadow</sk-button>
+  <sk-button elevation="xs">XS shadow</sk-button>
+  <sk-button elevation="s">S shadow</sk-button>
+  <sk-button elevation="m">M shadow</sk-button>
+  <sk-button elevation="l">L shadow</sk-button>
+  <sk-button elevation="xl">XL shadow</sk-button>
+</sk-section>

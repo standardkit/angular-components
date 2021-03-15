@@ -1,1 +1,1 @@
-export type FillType = 'fill' | 'outline' | 'plain';
+export type FillType = 'fill' | 'outline' | 'plain' | 'contrast';

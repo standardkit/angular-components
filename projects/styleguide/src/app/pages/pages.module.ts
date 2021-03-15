@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SkCommonModule, SkTypographyModule } from '@standardkit/angular-components';
+import { SkCommonModule, SkLayoutModule, SkTypographyModule } from '@standardkit/angular-components';
 import { StgAlertPage } from './alert/alert.page';
+import { StgButtonPage } from './button/button.page';
 import { StgCodeBlockPage } from './code-block/code-block.page';
 import { StgFigurePage } from './figure/figure.page';
 import { StgHighlightPage } from './highlight/highlight.page';
@@ -16,6 +17,7 @@ import { StgTitlePage } from './title/title.page';
 
 const PAGES = [
   StgAlertPage,
+  StgButtonPage,
   StgCodeBlockPage,
   StgFigurePage,
   StgHighlightPage,
@@ -33,7 +35,8 @@ const PAGES = [
     RouterModule,
     SkCommonModule,
     SkTypographyModule,
-    CommonModule
+    CommonModule,
+    SkLayoutModule
   ],
   declarations: PAGES,
   exports: PAGES
