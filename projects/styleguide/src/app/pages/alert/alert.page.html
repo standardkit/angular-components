@@ -1,55 +1,121 @@
 <sk-title heading="1">sk-alert</sk-title>
 <sk-divider></sk-divider>
 
-<div class="alert">
-  <div class="alert__content">
-    I am an alert without using the component
+<sk-section>
+  <sk-title>HTML</sk-title>
+  <div class="alert">
+    <i class="fa fa-skull"></i>&nbsp;
+    I am an div with class alert!
   </div>
-</div>
-<br>
+</sk-section>
+<sk-divider></sk-divider>
+<sk-section>
+  <sk-title>Types & icons</sk-title>
+  <sk-bar>
+  <sk-alert>Info</sk-alert>
+  <sk-alert type="success">Success</sk-alert>
+  <sk-alert type="warning">Warning</sk-alert>
+  <sk-alert type="error">Error</sk-alert>
+  <sk-alert type="custom">Custom</sk-alert>
+  </sk-bar>
+</sk-section>
+<sk-divider></sk-divider>
+<sk-section>
+  <sk-title>Fill Types</sk-title>
+  <sk-subtitle>fill</sk-subtitle>
+  <sk-alert fill="fill">Info</sk-alert>
+  <sk-alert fill="fill" type="success">Success</sk-alert>
+  <sk-alert fill="fill" type="warning">Warning</sk-alert>
+  <sk-alert fill="fill" type="error">Error</sk-alert>
+  <sk-alert fill="fill" type="custom">Custom</sk-alert>
 
-<sk-alert>I am an alert</sk-alert>
+  <sk-subtitle>outline</sk-subtitle>
+  <sk-alert fill="outline">Info</sk-alert>
+  <sk-alert fill="outline" type="success">Success</sk-alert>
+  <sk-alert fill="outline" type="warning">Warning</sk-alert>
+  <sk-alert fill="outline" type="error">Error</sk-alert>
+  <sk-alert fill="outline" type="custom">Custom</sk-alert>
 
-<br>
+  <sk-subtitle>contrast</sk-subtitle>
+  <sk-alert fill="contrast">Info</sk-alert>
+  <sk-alert fill="contrast" type="success">Success</sk-alert>
+  <sk-alert fill="contrast" type="warning">Warning</sk-alert>
+  <sk-alert fill="contrast" type="error">Error</sk-alert>
+  <sk-alert fill="contrast" type="custom">Custom</sk-alert>
 
-<sk-alert [hasIcon]="true">I am an alert</sk-alert>
+</sk-section>
+<sk-divider></sk-divider>
+<sk-section>
+  <sk-title>Dismissable</sk-title>
+  <sk-alert (dismiss)="visible = false" *ngIf="visible" [dismissable]="true">Dismiss me</sk-alert>
+  <sk-button (skClick)="visible = true" *ngIf="!visible">Give me dismissable notification</sk-button>
+</sk-section>
+<sk-divider></sk-divider>
+<sk-section>
+  <sk-title>Sizes</sk-title>
+  <sk-alert size="xs">Extra small</sk-alert>
+  <sk-alert size="s">small</sk-alert>
+  <sk-alert>default / medium</sk-alert>
+  <sk-alert size="l">large</sk-alert>
+  <sk-alert size="xl">Extra large</sk-alert>
+</sk-section>
+<sk-divider></sk-divider>
 
-<br>
-
-<sk-alert [hasIcon]="true" type="warning">I am a warning</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" type="error">I am an error</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" type="success">I am a success alert</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" fill="fill" type="success">I am fill fill</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" fill="outline" type="error">I am fill collins</sk-alert>
-<br>
-<sk-alert (dismiss)="visible = false" *ngIf="visible" [dismissable]="true">I am an dismissable</sk-alert>
-<sk-button (skClick)="visible = true" *ngIf="!visible">Give me dismissable notification</sk-button>
-<br>
-<sk-alert [hasIcon]="true" alignIcon="middle">
-  Icon is middle
-  <br>
-  You see?
-</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" alignIcon="bottom">
-  Icon is bottom
-  <br>
-  down there
-</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" type="error" fill="outline" corner="xl">Extra large corner</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" type="success" fill="fill" corner="leaf">Leaf corner</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" type="error" fill="outline" corner="inverted-leaf">Inverted leaf corner</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" type="error" fill="outline" corner="sharp">Sharp corner</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" type="error" fill="outline" corner="m">Medium corner</sk-alert>
-<br>
-<sk-alert [hasIcon]="true" type="error" fill="outline" corner="xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores consectetur, cumque dolore est ex impedit ipsum laudantium maiores, maxime nam natus nemo neque nesciunt numquam odit placeat provident quasi qui quo repellendus sequi similique sunt ut velit veniam vitae! Accusamus aliquam, aspernatur deserunt eveniet excepturi exercitationem hic incidunt magni necessitatibus quaerat quidem quod rerum sint suscipit temporibus veniam vitae voluptate! A ab aspernatur error fugiat fugit id nemo nesciunt porro quo reprehenderit, suscipit tempora, vel veniam vero voluptates voluptatibus voluptatum? A aperiam beatae dicta dignissimos doloremque dolorum ea eius esse harum impedit in incidunt laboriosam laborum libero minima, nemo possimus praesentium provident quaerat quam quidem quis reiciendis repellat repudiandae saepe sit, voluptatibus? Aliquid architecto aspernatur aut, cum dolor ea eaque earum excepturi explicabo facere facilis fugit, illo inventore iste laudantium magnam minus necessitatibus obcaecati officia pariatur quisquam soluta veritatis voluptatum! A alias amet aspernatur blanditiis dolores dolorum est eveniet facilis laborum molestias nisi placeat quia, quo quod, rerum suscipit tempora ut? Autem doloremque eos fugit impedit modi? Ad aliquam aperiam beatae consequuntur, corporis delectus doloremque eos excepturi illo illum minus necessitatibus, odit quidem quod ullam ut vel voluptate. Alias aspernatur aut cumque cupiditate debitis delectus dolorum est et hic, id illo illum impedit iste labore laudantium libero magnam minima, molestias neque nesciunt nisi odit optio provident quaerat quibusdam quis quisquam quo repellendus vitae voluptate! Adipisci, distinctio, error. Consectetur explicabo facilis ipsam laudantium temporibus? Ab assumenda ea eaque fugiat ipsum modi molestias nemo nisi perspiciatis praesentium! A aspernatur consequatur ducimus facilis nobis sint voluptate? Accusantium aliquid animi dicta dolor, doloremque doloribus ducimus ea error et eum excepturi expedita illo labore minus molestiae mollitia natus nostrum nulla odio porro praesentium quaerat quisquam tempora vel voluptatum. Impedit ipsum optio rerum sit unde. Alias doloremque ducimus nemo quisquam soluta. Aperiam deleniti dolore est iste laboriosam provident repellendus sit tempore. At commodi consectetur eius ipsum nemo optio quo saepe veniam! Alias aliquam aut culpa cupiditate doloribus fugit itaque natus nihil nulla officiis optio quam, quos soluta suscipit vitae! A ad aliquam commodi consequatur corporis debitis dicta doloribus dolorum eaque eos explicabo facere hic id impedit incidunt inventore laudantium magnam modi natus necessitatibus nemo nisi numquam omnis perferendis porro, quaerat quam quasi quos ratione repellat similique sit, unde voluptatibus. Alias blanditiis consequuntur cum labore non sapiente sint tempore? Aliquid commodi consectetur ducimus, eos facere possimus praesentium sequi. Ad at culpa dolor illo nobis possimus quis! Aspernatur blanditiis corporis ea error esse eveniet harum illum obcaecati. Ab beatae doloremque fuga hic impedit minus nam nesciunt, odio perspiciatis quaerat quas quasi ratione recusandae, sequi soluta, tempora velit veniam? Accusamus aliquam aperiam architecto consequatur corporis culpa debitis delectus distinctio dolores dolorum ea error esse est eum expedita explicabo facere fuga, id illo ipsum itaque iure mollitia neque nihil perferendis placeat praesentium provident quam quidem repudiandae similique temporibus ullam unde ut voluptas voluptatem voluptatum? Error maiores optio similique. Dolore ducimus eveniet harum ipsum itaque odit placeat sint tempora. Aperiam minus necessitatibus officiis quas rem sequi. Aliquam doloribus veritatis vero.</sk-alert>
-<br>
+<sk-section>
+  <sk-title>Icon Alignment</sk-title>
+  <sk-alert [dismissable]="true" alignDismiss="bottom">icon top / default <br> dismiss bottom</sk-alert>
+  <sk-alert [dismissable]="true" alignDismiss="middle" alignIcon="middle">icon middle <br> dismiss middle</sk-alert>
+  <sk-alert [dismissable]="true" alignIcon="bottom">icon bottom <br> dismiss top / default</sk-alert>
+</sk-section>
+<sk-divider></sk-divider>
+<sk-section>
+  <sk-title>Corners</sk-title>
+  <sk-alert fill="outline" corner="sharp">Sharp</sk-alert>
+  <sk-alert fill="outline" corner="xs">Extra small</sk-alert>
+  <sk-alert fill="outline" corner="s">small</sk-alert>
+  <sk-alert fill="outline" >default / medium</sk-alert>
+  <sk-alert fill="outline" corner="l">Large</sk-alert>
+  <sk-alert fill="outline" corner="xl">Extra large</sk-alert>
+  <sk-alert fill="outline" type="error" corner="round">Round</sk-alert>
+  <sk-alert corner="leaf" type="success" fill="fill">Leaf</sk-alert>
+  <sk-alert fill="outline" corner="inverted-leaf" type="success">inverted leaf</sk-alert>
+</sk-section>
+<sk-divider></sk-divider>
+<sk-section>
+  <sk-title>Big boy</sk-title>
+  <sk-alert corner="xl" fill="outline" padding="xl" margin="xl" size="xl">Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit. Architecto asperiores consectetur, cumque dolore est ex impedit ipsum laudantium maiores, maxime nam
+    natus nemo neque nesciunt numquam odit placeat provident quasi qui quo repellendus sequi similique sunt ut velit
+    veniam vitae! Accusamus aliquam, aspernatur deserunt eveniet excepturi exercitationem hic incidunt magni
+    necessitatibus quaerat quidem quod rerum sint suscipit temporibus veniam vitae voluptate! A ab aspernatur error fugiat
+    fugit id nemo nesciunt porro quo reprehenderit, suscipit tempora, vel veniam vero voluptates voluptatibus voluptatum?
+    A aperiam beatae dicta dignissimos doloremque dolorum ea eius esse harum impedit in incidunt laboriosam laborum libero
+    minima, nemo possimus praesentium provident quaerat quam quidem quis reiciendis repellat repudiandae saepe sit,
+    voluptatibus? Aliquid architecto aspernatur aut, cum dolor ea eaque earum excepturi explicabo facere facilis fugit,
+    illo inventore iste laudantium magnam minus necessitatibus obcaecati officia pariatur quisquam soluta veritatis
+    voluptatum! A alias amet aspernatur blanditiis dolores dolorum est eveniet facilis laborum molestias nisi placeat
+    quia, quo quod, rerum suscipit tempora ut? Autem doloremque eos fugit impedit modi? Ad aliquam aperiam beatae
+    consequuntur, corporis delectus doloremque eos excepturi illo illum minus necessitatibus, odit quidem quod ullam ut
+    vel voluptate. Alias aspernatur aut cumque cupiditate debitis delectus dolorum est et hic, id illo illum impedit iste
+    labore laudantium libero magnam minima, molestias neque nesciunt nisi odit optio provident quaerat quibusdam quis
+    quisquam quo repellendus vitae voluptate! Adipisci, distinctio, error. Consectetur explicabo facilis ipsam laudantium
+    temporibus? Ab assumenda ea eaque fugiat ipsum modi molestias nemo nisi perspiciatis praesentium! A aspernatur
+    consequatur ducimus facilis nobis sint voluptate? Accusantium aliquid animi dicta dolor, doloremque doloribus ducimus
+    ea error et eum excepturi expedita illo labore minus molestiae mollitia natus nostrum nulla odio porro praesentium
+    quaerat quisquam tempora vel voluptatum. Impedit ipsum optio rerum sit unde. Alias doloremque ducimus nemo quisquam
+    soluta. Aperiam deleniti dolore est iste laboriosam provident repellendus sit tempore. At commodi consectetur eius
+    ipsum nemo optio quo saepe veniam! Alias aliquam aut culpa cupiditate doloribus fugit itaque natus nihil nulla
+    officiis optio quam, quos soluta suscipit vitae! A ad aliquam commodi consequatur corporis debitis dicta doloribus
+    dolorum eaque eos explicabo facere hic id impedit incidunt inventore laudantium magnam modi natus necessitatibus nemo
+    nisi numquam omnis perferendis porro, quaerat quam quasi quos ratione repellat similique sit, unde voluptatibus. Alias
+    blanditiis consequuntur cum labore non sapiente sint tempore? Aliquid commodi consectetur ducimus, eos facere possimus
+    praesentium sequi. Ad at culpa dolor illo nobis possimus quis! Aspernatur blanditiis corporis ea error esse eveniet
+    harum illum obcaecati. Ab beatae doloremque fuga hic impedit minus nam nesciunt, odio perspiciatis quaerat quas quasi
+    ratione recusandae, sequi soluta, tempora velit veniam? Accusamus aliquam aperiam architecto consequatur corporis
+    culpa debitis delectus distinctio dolores dolorum ea error esse est eum expedita explicabo facere fuga, id illo ipsum
+    itaque iure mollitia neque nihil perferendis placeat praesentium provident quam quidem repudiandae similique
+    temporibus ullam unde ut voluptas voluptatem voluptatum? Error maiores optio similique. Dolore ducimus eveniet harum
+    ipsum itaque odit placeat sint tempora. Aperiam minus necessitatibus officiis quas rem sequi. Aliquam doloribus
+    veritatis vero.
+  </sk-alert>
+</sk-section>

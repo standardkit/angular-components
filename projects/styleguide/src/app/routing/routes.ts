@@ -1,6 +1,7 @@
 export const StgRoutes = {
   OVERVIEW: 'overview',
   ALERT: 'alert',
+  BAR: 'bar',
   BUTTON: 'button',
   CODE_BLOCK: 'code-block',
   FIGURE: 'figure',

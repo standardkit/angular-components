@@ -6,6 +6,7 @@ import { SkDirectivesModule } from '../../directives/directives.module';
 import { SkAlertComponent } from './alert/alert.component';
 import { SkAvatarComponent } from './avatar/avatar.component';
 import { SkBadgeComponent } from './badge/badge.component';
+import { SkBarComponent } from './bar/bar.component';
 import { SkButtonGroupComponent } from './button-group/button-group.component';
 import { SkButtonComponent } from './button/button.component';
 import { SkCardComponent } from './card/card.component';
@@ -22,6 +23,7 @@ const COMPONENTS = [
   SkAlertComponent,
   SkAvatarComponent,
   SkBadgeComponent,
+  SkBarComponent,
   SkButtonComponent,
   SkButtonGroupComponent,
   SkCardComponent,

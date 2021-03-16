@@ -9,7 +9,8 @@ import { SkFullWidthDirective } from './full-width.directive';
 import { SkInputDirective } from './input.directive';
 import { SkMarginDirective } from './margin.directive';
 import { SkPaddingDirective } from './padding.directive';
-import { SkSizeDirective } from './size.directive';
+import { SkTextMarginDirective } from './text-margin.directive';
+import { SkTextSizeDirective } from './text-size.directive';
 
 const DIRECTIVES = [
   SkAutofocusDirective,
@@ -22,7 +23,8 @@ const DIRECTIVES = [
   SkInputDirective,
   SkMarginDirective,
   SkPaddingDirective,
-  SkSizeDirective
+  SkTextMarginDirective,
+  SkTextSizeDirective
 ];
 
 @NgModule({

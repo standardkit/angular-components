@@ -25,6 +25,7 @@ export class SkAlertComponent implements AfterViewInit {
   @Input() margin?: SizeType | string;
   @Input() padding?: SizeType | string;
   @Input() fullWidth?: boolean;
+  @Input() size?: SizeType | string;
   @Input() corner?: CornerType | string;
 
   @Output() dismiss: EventEmitter<void> = new EventEmitter<void>();
@@ -34,6 +35,7 @@ export class SkAlertComponent implements AfterViewInit {
   defaultFill?: FillType | string;
   defaultMargin?: SizeType | string;
   defaultPadding?: SizeType | string;
+  defaultSize?: SizeType | string;
   defaultFullWidth?: boolean;
   defaultCorner?: CornerType | string;
 
@@ -45,11 +47,12 @@ export class SkAlertComponent implements AfterViewInit {
     const configuration = configurationService.get();
     this.defaultHasIcon = configuration?.alert?.hasIcon;
     this.defaultDismissable = configuration?.alert?.dismissable;
-    this.defaultFill = configuration.alert?.fill ?? configuration.fill;
-    this.defaultMargin = configuration.alert?.margin ?? configuration.margin;
-    this.defaultPadding = configuration.alert?.padding ?? configuration.padding;
-    this.defaultFullWidth = configuration.alert?.fullWidth;
-    this.defaultCorner = configuration.alert?.corner ?? configuration.corner;
+    this.defaultMargin = configuration?.alert?.margin ?? configuration?.margin;
+    this.defaultFill = configuration?.alert?.fill ?? configuration?.fill;
+    this.defaultPadding = configuration?.alert?.padding ?? configuration?.padding;
+    this.defaultSize = configuration?.alert?.size ?? configuration?.size;
+    this.defaultFullWidth = configuration?.alert?.fullWidth;
+    this.defaultCorner = configuration?.alert?.corner ?? configuration?.corner;
   }
 
   ngAfterViewInit(): void {

@@ -1,36 +1,37 @@
 <div
-  class="alert"
   [ngClass]="type ? 'alert--' + type : ''"
+  [skCorner]="corner ? corner : defaultCorner"
   [skFill]="fill ? fill : defaultFill"
-  [skMargin]="margin ? margin : defaultMargin"
-  [skPadding]="padding ? padding : defaultPadding"
+  [skTextSize]="size ? size : defaultSize"
   [skFullWidth]="fullWidth ? fullWidth : defaultFullWidth"
-  [skCorner]="corner ? corner : defaultCorner">
+  [skTextMargin]="margin ? margin : defaultMargin"
+  [skPadding]="padding ? padding : defaultPadding"
+  class="alert">
 
-  <span *ngIf="!isInitialized || hasIconContent" #icon
-        class="alert__icon" [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : ''">
+  <div #icon *ngIf="!isInitialized || hasIconContent"
+        [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : ''" class="alert__icon">
     <ng-content select="[sk-alert-icon],[slot=icon]"></ng-content>
-  </span>
+  </div>
 
-  <span *ngIf="isInitialized && !hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)"
-        class="alert__icon" [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : ''">
+  <div *ngIf="isInitialized && !hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)"
+        [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : ''" class="alert__icon">
     <sk-icon [icon]="icon" [type]="type"></sk-icon>
-  </span>
+  </div>
 
   <div class="alert__content">
     <ng-content></ng-content>
   </div>
 
-  <span *ngIf="!isInitialized || hasIconContent" (click)="onDismiss()" #dismiss
+  <div #dismiss (click)="onDismiss()" *ngIf="!isInitialized || hasIconContent"
         [ngClass]="alignDismiss ? 'alert__dismiss--' + alignDismiss : ''"
         class="alert__dismiss">
     <ng-content select="[sk-alert-dismiss],[slot=dismiss]"></ng-content>
-  </span>
+  </div>
 
-  <span *ngIf="isInitialized && !hasDismissContent && (dismissable || dismissable === undefined && defaultDismissable)"
-        class="alert__dismiss"
+  <div (click)="onDismiss()"
+        *ngIf="isInitialized && !hasDismissContent && (dismissable || dismissable === undefined && defaultDismissable)"
         [ngClass]="alignDismiss ? 'alert__dismiss--' + alignDismiss : ''"
-        (click)="onDismiss()">
+        class="alert__dismiss">
     <sk-icon [icon]="dismissIcon" type="close"></sk-icon>
-  </span>
+  </div>
 </div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StgDashboardLayout } from '../layout/dashboard/dashboard.layout';
 import { StgAlertPage } from '../pages/alert/alert.page';
+import { StgBarPage } from '../pages/bar/bar.page';
 import { StgButtonPage } from '../pages/button/button.page';
 import { StgCodeBlockPage } from '../pages/code-block/code-block.page';
 import { StgFigurePage } from '../pages/figure/figure.page';
@@ -22,6 +23,7 @@ const routes: Routes = [
       {path: StgRoutes.OVERVIEW, component: StgOverviewPage},
 
       {path: StgRoutes.ALERT, component: StgAlertPage},
+      {path: StgRoutes.BAR, component: StgBarPage},
       {path: StgRoutes.BUTTON, component: StgButtonPage},
       {path: StgRoutes.CODE_BLOCK, component: StgCodeBlockPage},
       {path: StgRoutes.FIGURE, component: StgFigurePage},

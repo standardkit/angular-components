@@ -18,6 +18,7 @@ import { StyleguideComponent } from './styleguide.component';
     StandardKitModule.forRoot({
       iconSet: 'font-awesome',
       iconMap: {custom: 'bug'},
+      alert: {hasIcon: true}
     })
   ],
   bootstrap: [

@@ -15,6 +15,7 @@ export class SkButtonComponent {
   @Input() isSubmit = false;
   @Input() type?: ColorType | string;
   @Input() fill?: FillType | string;
+  @Input() size?: SizeType | string;
   @Input() margin?: SizeType | string;
   @Input() padding?: SizeType | string;
   @Input() fullWidth?: boolean;
@@ -29,15 +30,17 @@ export class SkButtonComponent {
   defaultFullWidth?: boolean;
   defaultCorner?: CornerType | string;
   defaultElevation?: ElevationType | string;
+  defaultSize?: SizeType | string;
 
   constructor(private configurationService: SkConfigurationService) {
     const configuration = configurationService.get();
-    this.defaultFill = configuration.button?.fill ?? configuration.fill;
-    this.defaultMargin = configuration.button?.margin ?? configuration.margin;
-    this.defaultPadding = configuration.button?.padding ?? configuration.padding;
-    this.defaultFullWidth = configuration.button?.fullWidth;
-    this.defaultCorner = configuration.button?.corner ?? configuration.corner;
-    this.defaultElevation = configuration.button?.elevation ?? configuration.elevation;
+    this.defaultFill = configuration?.button?.fill ?? configuration?.fill;
+    this.defaultSize = configuration?.button?.size ?? configuration?.size;
+    this.defaultMargin = configuration?.button?.margin ?? configuration?.margin;
+    this.defaultPadding = configuration?.button?.padding ?? configuration?.padding;
+    this.defaultFullWidth = configuration?.button?.fullWidth;
+    this.defaultCorner = configuration?.button?.corner ?? configuration?.corner;
+    this.defaultElevation = configuration?.button?.elevation ?? configuration?.elevation;
   }
 
   onClick(): void {

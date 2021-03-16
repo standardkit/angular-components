@@ -1,4 +1,5 @@
 import { AlertLevelType } from '../types/alert-level.type';
+import { AlignmentType } from '../types/alignment.type';
 import { BorderPositionType } from '../types/border-position.type';
 import { BreakpointType } from '../types/breakpoint.type';
 import { CaseType } from '../types/case.type';
@@ -61,6 +62,8 @@ export interface SkConfigurationInterface {
   // Flavours
   elevation?: SizeType | string;
   fill?: FillType | string;
+
+  alignment?: AlignmentType | string;
 
   size?: SizeType | string;
   padding?: SizeType | string;
@@ -133,6 +136,7 @@ export interface SkConfigurationInterface {
   // Components
   alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string }
     & Fill & SizeConfiguration & FullWidth & Corner;
+  bar?: { alignment?: AlignmentType, position?: VerticalPositionType } & Extendable;
   badge?: { position?: PositionType; };
   button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
