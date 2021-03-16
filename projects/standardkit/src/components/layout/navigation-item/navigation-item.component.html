@@ -1,4 +1,4 @@
-<a class="navigation-item" [routerLink]="route" routerLinkActive="navigation-item--active">
+<a class="navigation-item" [routerLink]="route" routerLinkActive="navigation-item--active" (click)="onNavigate()">
 
    <span #icon *ngIf="!isInitialized || hasIconContent" class="navigation-item__icon">
     <ng-content select="sk-icon,[icon],[navigation-item-icon],[slot=icon]"></ng-content>
