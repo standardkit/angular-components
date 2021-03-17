@@ -8,9 +8,11 @@ import { StgButtonPage } from './button/button.page';
 import { StgCodeBlockPage } from './code-block/code-block.page';
 import { StgFigurePage } from './figure/figure.page';
 import { StgHighlightPage } from './highlight/highlight.page';
+import { StgIconPage } from './icon/icon.page';
 import { StgImagePage } from './image/image.page';
 import { StgLinkPage } from './link/link.page';
 import { StgListPage } from './list/list.page';
+import { StgModalPage } from './modal/modal.page';
 import { StgOverviewPage } from './overview/overview.page';
 import { StgParagraphPage } from './paragraph/paragraph.page';
 import { StgSubtitlePage } from './subtitle/subtitle.page';
@@ -24,9 +26,11 @@ const PAGES = [
   StgCodeBlockPage,
   StgFigurePage,
   StgHighlightPage,
+  StgIconPage,
   StgImagePage,
   StgLinkPage,
   StgListPage,
+  StgModalPage,
   StgOverviewPage,
   StgParagraphPage,
   StgSubtitlePage,

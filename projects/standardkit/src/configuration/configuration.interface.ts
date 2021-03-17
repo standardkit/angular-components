@@ -145,6 +145,7 @@ export interface SkConfigurationInterface {
   buttonGroup?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   progressBar?: SizeConfiguration & Case & Elevation & Corner & Fill & { mode?: string; };
   image?: Corner;
-  section?: Margin;
+  modal?: Padding & Extendable;
+  section?: Margin & Extendable;
   list?: Elevation & Corner;
 }
