@@ -24,7 +24,6 @@ export class SkAlertComponent implements AfterViewInit {
   @Input() fill?: FillType | string;
   @Input() margin?: SizeType | string;
   @Input() padding?: SizeType | string;
-  @Input() fullWidth?: boolean;
   @Input() size?: SizeType | string;
   @Input() corner?: CornerType | string;
 
@@ -36,7 +35,6 @@ export class SkAlertComponent implements AfterViewInit {
   defaultMargin?: SizeType | string;
   defaultPadding?: SizeType | string;
   defaultSize?: SizeType | string;
-  defaultFullWidth?: boolean;
   defaultCorner?: CornerType | string;
 
   isInitialized = false;
@@ -51,7 +49,6 @@ export class SkAlertComponent implements AfterViewInit {
     this.defaultFill = configuration?.alert?.fill ?? configuration?.fill;
     this.defaultPadding = configuration?.alert?.padding ?? configuration?.padding;
     this.defaultSize = configuration?.alert?.size ?? configuration?.size;
-    this.defaultFullWidth = configuration?.alert?.fullWidth;
     this.defaultCorner = configuration?.alert?.corner ?? configuration?.corner;
   }
 
