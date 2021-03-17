@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { SkConfigurationService } from '../../../configuration/configuration.service';
+import { HeadingType } from '../../../types/heading.type';
 import { SizeType } from '../../../types/size.type';
 
 @Component({
@@ -7,7 +8,7 @@ import { SizeType } from '../../../types/size.type';
   templateUrl: 'title.component.html'
 })
 export class SkTitleComponent {
-  @Input() heading: 1 | 2 | 3 | 4 | 5 | 6 = 2;
+  @Input() heading: HeadingType = 2;
   @Input() type!: string;
   @Input() margin?: SizeType | string;
 

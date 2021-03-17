@@ -8,5 +8,6 @@ export * from './navigation/navigation.component';
 export * from './navigation-bar/navigation-bar.component';
 export * from './navigation-item/navigation-item.component';
 export * from './navigation-title/navigation-title.component';
+export * from './section/section.component';
 export * from './sidebar/sidebar.component';
 export * from './spacer/spacer.component';

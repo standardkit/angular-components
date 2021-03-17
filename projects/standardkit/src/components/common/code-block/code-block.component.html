@@ -1,2 +1,6 @@
 <!-- TODO: Implement a copy-to-clipboard button. Maybe use ngxClipboard, or handle it with content projection/configurable -->
-<pre class="code-block"><ng-content></ng-content></pre>
+<pre class="code-block"><ng-container *ngIf="code else content">{{ code }}</ng-container></pre>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

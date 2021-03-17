@@ -1,8 +1,10 @@
 import { AlertLevelType } from '../types/alert-level.type';
+import { AlignmentType } from '../types/alignment.type';
 import { BorderPositionType } from '../types/border-position.type';
 import { BreakpointType } from '../types/breakpoint.type';
 import { CaseType } from '../types/case.type';
 import { CornerType } from '../types/corner.type';
+import { ElevationType } from '../types/elevation.type';
 import { FillType } from '../types/fill.type';
 import { HighlightType } from '../types/highlight.type';
 import { PositionType } from '../types/position.type';
@@ -32,11 +34,10 @@ interface Fill {
 
 interface Corner {
   corner?: CornerType | string;
-  cornerRadius?: SizeType | string;
 }
 
 interface Elevation {
-  elevation?: SizeType | string;
+  elevation?: ElevationType | string;
 }
 
 interface Margin {
@@ -62,6 +63,8 @@ export interface SkConfigurationInterface {
   elevation?: SizeType | string;
   fill?: FillType | string;
 
+  alignment?: AlignmentType | string;
+
   size?: SizeType | string;
   padding?: SizeType | string;
   margin?: SizeType | string;
@@ -70,7 +73,6 @@ export interface SkConfigurationInterface {
   borderSize?: SizeType | string;
 
   corner?: CornerType | string;
-  cornerRadius?: SizeType | string;
 
   colors?: {
     title?: string;
@@ -133,11 +135,14 @@ export interface SkConfigurationInterface {
 
   // Components
   alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string }
-    & Fill & SizeConfiguration & FullWidth;
+    & Fill & SizeConfiguration & FullWidth & Corner;
+  bar?: { alignment?: AlignmentType, position?: VerticalPositionType } & Extendable;
   badge?: { position?: PositionType; };
   button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   buttonGroup?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   progressBar?: SizeConfiguration & Case & Elevation & Corner & Fill & { mode?: string; };
-  image?: {};
+  image?: Corner;
+  section?: Margin;
+  list?: Elevation & Corner;
 }

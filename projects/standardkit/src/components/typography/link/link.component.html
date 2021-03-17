@@ -1,0 +1,7 @@
+<a
+  class="link"
+  [ngClass]="type ? 'link--' + type : ''"
+  [routerLink]="route"
+  routerLinkActive="link--active">
+  <ng-content></ng-content>
+</a>

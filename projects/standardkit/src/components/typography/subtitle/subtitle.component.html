@@ -1,31 +1,31 @@
 <ng-container [ngSwitch]="heading">
-  <h1 *ngSwitchCase="1" class="subtitle" [ngClass]="type ? 'subtitle-' + type : undefined"
-      [skMargin]="margin ? margin : defaultMargin">
+  <h1 *ngSwitchCase="1" class="subtitle" [ngClass]="type ? 'subtitle--' + type : ''"
+      [skTextMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h1>
 
-  <h2 *ngSwitchCase="2" class="subtitle" [ngClass]="type ? 'subtitle-' + type : undefined"
-      [skMargin]="margin ? margin : defaultMargin">
+  <h2 *ngSwitchCase="2" class="subtitle" [ngClass]="type ? 'subtitle--' + type : ''"
+      [skTextMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h2>
 
-  <h3 *ngSwitchCase="3" class="subtitle" [ngClass]="type ? 'subtitle-' + type : undefined"
-      [skMargin]="margin ? margin : defaultMargin">
+  <h3 *ngSwitchCase="3" class="subtitle" [ngClass]="type ? 'subtitle--' + type : ''"
+      [skTextMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h3>
 
-  <h4 *ngSwitchCase="4" class="subtitle" [ngClass]="type ? 'subtitle-' + type : undefined"
-      [skMargin]="margin ? margin : defaultMargin">
+  <h4 *ngSwitchCase="4" class="subtitle" [ngClass]="type ? 'subtitle--' + type : ''"
+      [skTextMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h4>
 
-  <h5 *ngSwitchCase="5" class="subtitle" [ngClass]="type ? 'subtitle-' + type : undefined"
-      [skMargin]="margin ? margin : defaultMargin">
+  <h5 *ngSwitchCase="5" class="subtitle" [ngClass]="type ? 'subtitle--' + type : ''"
+      [skTextMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h5>
 
-  <h6 *ngSwitchCase="6" class="subtitle" [ngClass]="type ? 'subtitle-' + type : undefined"
-      [skMargin]="margin ? margin : defaultMargin">
+  <h6 *ngSwitchCase="6" class="subtitle" [ngClass]="type ? 'subtitle--' + type : ''"
+      [skTextMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h6>
 </ng-container>

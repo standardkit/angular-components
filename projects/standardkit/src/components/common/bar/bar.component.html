@@ -1,0 +1,5 @@
+<div
+  [ngClass]="alignment ? 'bar--' + alignment : defaultAlignment ? 'bar--'+ defaultAlignment : ''"
+  class="bar{{ position ? ' position--' + position : defaultPosition ? ' position--' + defaultPosition : '' }}">
+  <ng-content></ng-content>
+</div>

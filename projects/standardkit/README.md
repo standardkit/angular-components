@@ -32,10 +32,10 @@ Import the StandardKit module into your angular project.
       alert: {hasIcon: true, isDismissable: true} // For example
     })
   ],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent]
+  declarations: [StyleguideComponent],
+  bootstrap: [StyleguideComponent]
 })
-export class AppModule {
+export class StyleguideModule {
 }
 
 ```

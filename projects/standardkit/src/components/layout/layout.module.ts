@@ -9,6 +9,7 @@ import { SkNavigationBarComponent } from './navigation-bar/navigation-bar.compon
 import { SkNavigationItemComponent } from './navigation-item/navigation-item.component';
 import { SkNavigationTitleComponent } from './navigation-title/navigation-title.component';
 import { SkNavigationComponent } from './navigation/navigation.component';
+import { SkSectionComponent } from './section/section.component';
 import { SkSidebarComponent } from './sidebar/sidebar.component';
 import { SkSpacerComponent } from './spacer/spacer.component';
 
@@ -19,6 +20,7 @@ const COMPONENTS = [
   SkNavigationBarComponent,
   SkNavigationItemComponent,
   SkNavigationTitleComponent,
+  SkSectionComponent,
   SkSidebarComponent,
   SkSpacerComponent
 ];

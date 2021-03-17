@@ -42,7 +42,90 @@
           }
         }
       }
+    },
+    "styleguide": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/styleguide",
+      "sourceRoot": "projects/styleguide/src",
+      "prefix": "stg",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/styleguide",
+            "index": "projects/styleguide/src/index.html",
+            "main": "projects/styleguide/src/main.ts",
+            "polyfills": "projects/styleguide/src/polyfills.ts",
+            "tsConfig": "projects/styleguide/tsconfig.stg.json",
+            "aot": true,
+            "assets": [
+              "projects/styleguide/src/assets"
+            ],
+            "styles": [
+              "projects/styleguide/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/styleguide/src/environments/environment.ts",
+                  "with": "projects/styleguide/src/environments/environment.production.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "styleguide:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "styleguide:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/styleguide/tsconfig.stg.json",
+              "projects/styleguide/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "standardkit"
+  "defaultProject": "styleguide"
 }

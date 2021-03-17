@@ -1,7 +1,15 @@
 <button
   class="button"
+  [ngClass]="type ? 'button--' + type : ''"
   [attr.disabled]="disabled ? true : undefined"
   [type]="isSubmit ? 'submit' : 'button'"
+  [skFill]="fill ? fill : defaultFill"
+  [skMargin]="margin ? margin : defaultMargin"
+  [skPadding]="padding ? padding : defaultPadding"
+  [skTextSize]="size ? size : defaultSize"
+  [skFullWidth]="fullWidth ? fullWidth : defaultFullWidth"
+  [skCorner]="corner ? corner : defaultCorner"
+  [skElevation]="elevation ? elevation : defaultElevation"
   (click)="onClick()">
   <ng-content></ng-content>
 </button>

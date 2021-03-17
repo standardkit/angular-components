@@ -1,12 +1,14 @@
-import { Inject, Injectable } from '@angular/core';
+import { Inject, Injectable, Optional } from '@angular/core';
 import { SkConfigurationInterface } from './configuration.interface';
 
 export const SK_CONFIGURATION = 'SK_CONFIGURATION';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class SkConfigurationService {
 
-  constructor(@Inject(SK_CONFIGURATION) private configuration?: SkConfigurationInterface) {
+  constructor(@Optional() @Inject(SK_CONFIGURATION) private configuration?: SkConfigurationInterface) {
   }
 
   get(): SkConfigurationInterface {

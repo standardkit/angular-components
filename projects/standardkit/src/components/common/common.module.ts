@@ -6,26 +6,34 @@ import { SkDirectivesModule } from '../../directives/directives.module';
 import { SkAlertComponent } from './alert/alert.component';
 import { SkAvatarComponent } from './avatar/avatar.component';
 import { SkBadgeComponent } from './badge/badge.component';
+import { SkBarComponent } from './bar/bar.component';
 import { SkButtonGroupComponent } from './button-group/button-group.component';
 import { SkButtonComponent } from './button/button.component';
 import { SkCardComponent } from './card/card.component';
 import { SkCodeBlockComponent } from './code-block/code-block.component';
 import { SkDividerComponent } from './divider/divider.component';
+import { SkFigureComponent } from './figure/figure.component';
 import { SkIconComponent } from './icon/icon.component';
 import { SkImageComponent } from './image/image.component';
+import { SkListItemComponent } from './list-item/list-item.component';
+import { SkListComponent } from './list/list.component';
 import { SkSpinnerComponent } from './spinner/spinner.component';
 
 const COMPONENTS = [
   SkAlertComponent,
   SkAvatarComponent,
   SkBadgeComponent,
+  SkBarComponent,
   SkButtonComponent,
   SkButtonGroupComponent,
   SkCardComponent,
   SkCodeBlockComponent,
   SkDividerComponent,
+  SkFigureComponent,
   SkIconComponent,
   SkImageComponent,
+  SkListComponent,
+  SkListItemComponent,
   SkSpinnerComponent
 ];
 

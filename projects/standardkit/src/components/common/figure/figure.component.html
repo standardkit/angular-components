@@ -1,0 +1,7 @@
+<figure class="figure">
+  <ng-content select="sk-image,[sk-figure-image],[slot=image]"></ng-content>
+
+  <figcaption *ngIf="!isInitialized || hasCaptionContent" #caption>
+    <ng-content select="[sk-figure-caption],[slot=caption]"></ng-content>
+  </figcaption>
+</figure>
