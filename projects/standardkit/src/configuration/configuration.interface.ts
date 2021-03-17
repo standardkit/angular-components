@@ -132,6 +132,7 @@ export interface SkConfigurationInterface {
   autocomplete?: SizeConfiguration & Corner & Elevation;
 
   // Tables
+  table?: Padding & Extendable;
 
   // Components
   alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string }
@@ -139,6 +140,7 @@ export interface SkConfigurationInterface {
   bar?: { alignment?: AlignmentType, position?: VerticalPositionType } & Extendable;
   badge?: { position?: PositionType; };
   button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
+  divider?: Margin & Extendable;
   loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   buttonGroup?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   progressBar?: SizeConfiguration & Case & Elevation & Corner & Fill & { mode?: string; };

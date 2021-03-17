@@ -11,5 +11,6 @@ export const StgRoutes = {
   LIST: 'list',
   PARAGRAPH: 'paragraph',
   SUBTITLE: 'subtitle',
-  TITLE: 'title'
+  TITLE: 'title',
+  TABLE: 'table'
 };

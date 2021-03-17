@@ -13,6 +13,7 @@ import { StgListPage } from '../pages/list/list.page';
 import { StgOverviewPage } from '../pages/overview/overview.page';
 import { StgParagraphPage } from '../pages/paragraph/paragraph.page';
 import { StgSubtitlePage } from '../pages/subtitle/subtitle.page';
+import { StgTablePage } from '../pages/table/table.page';
 import { StgTitlePage } from '../pages/title/title.page';
 import { StgRoutes } from './routes';
 
@@ -33,6 +34,7 @@ const routes: Routes = [
       {path: StgRoutes.LIST, component: StgListPage},
       {path: StgRoutes.PARAGRAPH, component: StgParagraphPage},
       {path: StgRoutes.SUBTITLE, component: StgSubtitlePage},
+      {path: StgRoutes.TABLE, component: StgTablePage},
       {path: StgRoutes.TITLE, component: StgTitlePage}
     ]
   }];
