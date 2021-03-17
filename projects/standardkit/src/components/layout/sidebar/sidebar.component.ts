@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ContentChildren, EventEmitter, Output, QueryList } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, EventEmitter, HostBinding, Output, QueryList } from '@angular/core';
 import { SkNavigationComponent } from '../navigation/navigation.component';
 
 @Component({
@@ -6,6 +6,8 @@ import { SkNavigationComponent } from '../navigation/navigation.component';
   templateUrl: 'sidebar.component.html'
 })
 export class SkSidebarComponent implements AfterContentInit {
+  @HostBinding('class') class = 'sidebar__container';
+
   @ContentChildren(SkNavigationComponent) navigations!: QueryList<SkNavigationComponent>;
 
   @Output() navigate: EventEmitter<string | void> = new EventEmitter<string | void>();
