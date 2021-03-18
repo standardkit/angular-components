@@ -10,6 +10,7 @@ import { StgFigurePage } from '../pages/figure/figure.page';
 import { StgHighlightPage } from '../pages/highlight/highlight.page';
 import { StgIconPage } from '../pages/icon/icon.page';
 import { StgImagePage } from '../pages/image/image.page';
+import { StgInputPage } from '../pages/input/input.page';
 import { StgLinkPage } from '../pages/link/link.page';
 import { StgListPage } from '../pages/list/list.page';
 import { StgLoginPage } from '../pages/login/login.page';
@@ -40,6 +41,7 @@ const routes: Routes = [
       {path: StgRoutes.HIGHLIGHT, component: StgHighlightPage},
       {path: StgRoutes.IMAGE, component: StgImagePage},
       {path: StgRoutes.ICON, component: StgIconPage},
+      {path: StgRoutes.INPUT, component: StgInputPage},
       {path: StgRoutes.LINK, component: StgLinkPage},
       {path: StgRoutes.LIST, component: StgListPage},
       {path: StgRoutes.MODAL, component: StgModalPage},

@@ -8,6 +8,7 @@ export const StgRoutes = {
   HIGHLIGHT: 'highlight',
   IMAGE: 'image',
   ICON: 'icon',
+  INPUT: 'input',
   LINK: 'link',
   LIST: 'list',
   MODAL: 'modal',

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SkCommonModule, SkLayoutModule, SkTableModule, SkTypographyModule } from '@standardkit/angular-components';
+import { SkCommonModule, SkFormModule, SkLayoutModule, SkTableModule, SkTypographyModule } from '@standardkit/angular-components';
 import { StgAlertPage } from './alert/alert.page';
 import { StgBarPage } from './bar/bar.page';
 import { StgButtonPage } from './button/button.page';
@@ -10,6 +10,7 @@ import { StgFigurePage } from './figure/figure.page';
 import { StgHighlightPage } from './highlight/highlight.page';
 import { StgIconPage } from './icon/icon.page';
 import { StgImagePage } from './image/image.page';
+import { StgInputPage } from './input/input.page';
 import { StgLinkPage } from './link/link.page';
 import { StgListPage } from './list/list.page';
 import { StgLoginPage } from './login/login.page';
@@ -28,6 +29,7 @@ const PAGES = [
   StgFigurePage,
   StgHighlightPage,
   StgIconPage,
+  StgInputPage,
   StgImagePage,
   StgLinkPage,
   StgListPage,
@@ -45,8 +47,8 @@ const PAGES = [
     CommonModule,
     RouterModule,
     SkCommonModule,
+    SkFormModule,
     SkTypographyModule,
-    CommonModule,
     SkLayoutModule,
     SkTableModule
   ],
