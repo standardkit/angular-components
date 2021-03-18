@@ -31,6 +31,7 @@ export class SkButtonComponent {
   defaultCorner?: CornerType | string;
   defaultElevation?: ElevationType | string;
   defaultSize?: SizeType | string;
+  defaultType?: ColorType | string;
 
   constructor(private configurationService: SkConfigurationService) {
     const configuration = configurationService.get();
@@ -39,6 +40,7 @@ export class SkButtonComponent {
     this.defaultMargin = configuration?.button?.margin ?? configuration?.margin;
     this.defaultPadding = configuration?.button?.padding ?? configuration?.padding;
     this.defaultFullWidth = configuration?.button?.fullWidth;
+    this.defaultType = configuration?.button?.type;
     this.defaultCorner = configuration?.button?.corner ?? configuration?.corner;
     this.defaultElevation = configuration?.button?.elevation ?? configuration?.elevation;
   }

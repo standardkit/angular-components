@@ -12,6 +12,7 @@ import { StgIconPage } from './icon/icon.page';
 import { StgImagePage } from './image/image.page';
 import { StgLinkPage } from './link/link.page';
 import { StgListPage } from './list/list.page';
+import { StgLoginPage } from './login/login.page';
 import { StgModalPage } from './modal/modal.page';
 import { StgOverviewPage } from './overview/overview.page';
 import { StgParagraphPage } from './paragraph/paragraph.page';
@@ -30,6 +31,7 @@ const PAGES = [
   StgImagePage,
   StgLinkPage,
   StgListPage,
+  StgLoginPage,
   StgModalPage,
   StgOverviewPage,
   StgParagraphPage,

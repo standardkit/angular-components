@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { StgCardLayout } from '../layout/card/card.layout';
 import { StgDashboardLayout } from '../layout/dashboard/dashboard.layout';
 import { StgAlertPage } from '../pages/alert/alert.page';
 import { StgBarPage } from '../pages/bar/bar.page';
@@ -11,6 +12,7 @@ import { StgIconPage } from '../pages/icon/icon.page';
 import { StgImagePage } from '../pages/image/image.page';
 import { StgLinkPage } from '../pages/link/link.page';
 import { StgListPage } from '../pages/list/list.page';
+import { StgLoginPage } from '../pages/login/login.page';
 import { StgModalPage } from '../pages/modal/modal.page';
 import { StgOverviewPage } from '../pages/overview/overview.page';
 import { StgParagraphPage } from '../pages/paragraph/paragraph.page';
@@ -21,10 +23,15 @@ import { StgRoutes } from './routes';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: StgRoutes.OVERVIEW},
+
+  {
+    path: '', component: StgCardLayout, children: [
+      {path: 'login', component: StgLoginPage}
+    ]
+  },
   {
     path: '', component: StgDashboardLayout, children: [
       {path: StgRoutes.OVERVIEW, component: StgOverviewPage},
-
       {path: StgRoutes.ALERT, component: StgAlertPage},
       {path: StgRoutes.BAR, component: StgBarPage},
       {path: StgRoutes.BUTTON, component: StgButtonPage},

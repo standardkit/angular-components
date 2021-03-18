@@ -103,6 +103,7 @@ export interface SkConfigurationInterface {
 
   // Layout
   navigationBar?: { color?: string; } & SizeConfiguration & Fill & Elevation & Extendable;
+  cardLayout?: Padding & Fill & Elevation & Corner & Margin & Size & Extendable;
 
   // Typography
   title?: Case & SizeConfiguration;

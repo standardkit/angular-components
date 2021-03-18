@@ -14,13 +14,14 @@ export class SkAlertComponent implements AfterViewInit {
   @ViewChild('icon') iconReference!: ElementRef;
   @ViewChild('dismiss') dismissReference!: ElementRef;
 
-  @Input() type: AlertLevelType | string = 'info';
   @Input() hasIcon?: boolean;
   @Input() dismissable?: boolean;
   @Input() icon?: string;
   @Input() alignIcon?: VerticalPositionType | string;
   @Input() dismissIcon?: string;
   @Input() alignDismiss?: VerticalPositionType | string;
+
+  @Input() type?: AlertLevelType | string;
   @Input() fill?: FillType | string;
   @Input() margin?: SizeType | string;
   @Input() padding?: SizeType | string;
@@ -31,6 +32,8 @@ export class SkAlertComponent implements AfterViewInit {
 
   defaultHasIcon?: boolean;
   defaultDismissable?: boolean;
+
+  defaultType?: AlertLevelType | string;
   defaultFill?: FillType | string;
   defaultMargin?: SizeType | string;
   defaultPadding?: SizeType | string;
@@ -45,6 +48,7 @@ export class SkAlertComponent implements AfterViewInit {
     const configuration = configurationService.get();
     this.defaultHasIcon = configuration?.alert?.hasIcon;
     this.defaultDismissable = configuration?.alert?.dismissable;
+    this.defaultType = configuration?.alert?.type;
     this.defaultMargin = configuration?.alert?.margin ?? configuration?.margin;
     this.defaultFill = configuration?.alert?.fill ?? configuration?.fill;
     this.defaultPadding = configuration?.alert?.padding ?? configuration?.padding;

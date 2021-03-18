@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SkCommonModule, SkLayoutModule } from '@standardkit/angular-components';
+import { SkCommonModule, SkLayoutModule, SkTypographyModule } from '@standardkit/angular-components';
+import { StgCardLayout } from './card/card.layout';
 import { StgDashboardLayout } from './dashboard/dashboard.layout';
 
 const LAYOUTS = [
+  StgCardLayout,
   StgDashboardLayout
 ];
 
@@ -11,6 +13,7 @@ const LAYOUTS = [
   imports: [
     RouterModule,
     SkLayoutModule,
+    SkTypographyModule,
     SkCommonModule
   ],
   declarations: LAYOUTS,
