@@ -1,4 +1,8 @@
-<label [for]="fieldId">
+<label
+  [for]="fieldId"
+  [skPadding]="padding ? padding : defaultPadding"
+  [skTextMargin]="margin ? margin : defaultMargin"
+  [skTextSize]="size ? size : defaultSize"
+  class="label">
   <ng-content></ng-content>
 </label>
-
