@@ -3,6 +3,7 @@ import { AlignmentType } from '../types/alignment.type';
 import { BorderPositionType } from '../types/border-position.type';
 import { BreakpointType } from '../types/breakpoint.type';
 import { CaseType } from '../types/case.type';
+import { ColorType } from '../types/color.type';
 import { CornerType } from '../types/corner.type';
 import { ElevationType } from '../types/elevation.type';
 import { FillType } from '../types/fill.type';
@@ -149,4 +150,5 @@ export interface SkConfigurationInterface {
   modal?: Padding & Extendable;
   section?: Margin & Extendable;
   list?: Elevation & Corner;
+  spinner?: Size & Margin & { type?: ColorType | string } & Extendable;
 }

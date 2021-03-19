@@ -13,6 +13,7 @@ export const StgRoutes = {
   LIST: 'list',
   MODAL: 'modal',
   PARAGRAPH: 'paragraph',
+  SPINNER: 'spinner',
   SUBTITLE: 'subtitle',
   TITLE: 'title',
   TABLE: 'table'

@@ -17,6 +17,7 @@ import { StgLoginPage } from '../pages/login/login.page';
 import { StgModalPage } from '../pages/modal/modal.page';
 import { StgOverviewPage } from '../pages/overview/overview.page';
 import { StgParagraphPage } from '../pages/paragraph/paragraph.page';
+import { StgSpinnerPage } from '../pages/spinner/spinner.page';
 import { StgSubtitlePage } from '../pages/subtitle/subtitle.page';
 import { StgTablePage } from '../pages/table/table.page';
 import { StgTitlePage } from '../pages/title/title.page';
@@ -48,7 +49,8 @@ const routes: Routes = [
       {path: StgRoutes.PARAGRAPH, component: StgParagraphPage},
       {path: StgRoutes.SUBTITLE, component: StgSubtitlePage},
       {path: StgRoutes.TABLE, component: StgTablePage},
-      {path: StgRoutes.TITLE, component: StgTitlePage}
+      {path: StgRoutes.TITLE, component: StgTitlePage},
+      {path: StgRoutes.SPINNER, component: StgSpinnerPage},
     ]
   }];
 

@@ -1,1 +1,9 @@
-<span class="spinner"></span>
+<div
+  [ngClass]="type ? 'spinner--' + type : defaultType ? 'spinner--' + defaultType : ''"
+  [skFill]="fill ? fill : defaultFill"
+  [skMargin]="margin ? margin : defaultMargin"
+  [skTextSize]="size ? size : defaultSize"
+  class="spinner__container">
+  <span class="spinner">
+  </span>
+</div>

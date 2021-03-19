@@ -17,6 +17,7 @@ import { StgLoginPage } from './login/login.page';
 import { StgModalPage } from './modal/modal.page';
 import { StgOverviewPage } from './overview/overview.page';
 import { StgParagraphPage } from './paragraph/paragraph.page';
+import { StgSpinnerPage } from './spinner/spinner.page';
 import { StgSubtitlePage } from './subtitle/subtitle.page';
 import { StgTablePage } from './table/table.page';
 import { StgTitlePage } from './title/title.page';
@@ -37,6 +38,7 @@ const PAGES = [
   StgModalPage,
   StgOverviewPage,
   StgParagraphPage,
+  StgSpinnerPage,
   StgSubtitlePage,
   StgTablePage,
   StgTitlePage
