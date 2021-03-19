@@ -11,6 +11,7 @@ import { HighlightType } from '../types/highlight.type';
 import { PositionType } from '../types/position.type';
 import { SizeType } from '../types/size.type';
 import { VerticalPositionType } from '../types/vertical-position.type';
+import { WidthType } from '../types/width.type';
 import { SkIconMapConfiguration } from './icon-map.configuration';
 
 interface Padding {
@@ -114,13 +115,14 @@ export interface SkConfigurationInterface {
 
   // Forms
   form?: FormConfiguration & Corner & Elevation;
+  formWidth?: WidthType | string;
   formField?: FormConfiguration & Corner & Elevation | {
     fullWidthUntil?: boolean; labelInline?: boolean;
     labelOffset?: number; labelColumns?: number;
     fieldOffset?: number; fieldColumns?: number;
   };
   label?: FormConfiguration;
-  input?: FormConfiguration & Corner & Elevation;
+  input?: FormConfiguration & Corner & Elevation & { width?: WidthType | string };
   select?: FormConfiguration & Corner & Elevation;
   textarea?: FormConfiguration & Corner & Elevation & { rows?: number; };
   formError?: FormConfiguration;
@@ -128,7 +130,7 @@ export interface SkConfigurationInterface {
   range?: SizeConfiguration & FullWidth;
   checkbox?: SizeConfiguration & Corner & Elevation;
   radio?: SizeConfiguration & Corner & Elevation;
-  inputGroup?: FormConfiguration & Corner & Elevation;
+  inputGroup?: FormConfiguration & Corner & Elevation & { width?: WidthType | string } & Extendable;
   datePicker?: FormConfiguration & Corner & Elevation;
   colorPicker?: FormConfiguration & Corner & Elevation;
   autocomplete?: SizeConfiguration & Corner & Elevation;

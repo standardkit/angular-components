@@ -10,5 +10,6 @@ export * from './full-width.directive';
 export * from './input.directive';
 export * from './margin.directive';
 export * from './padding.directive';
+export * from './width.directive';
 export * from './text-margin.directive';
 export * from './text-size.directive';
