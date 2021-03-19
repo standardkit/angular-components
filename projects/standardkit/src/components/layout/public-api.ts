@@ -3,6 +3,7 @@ export * from './layout.module';
 
 // Components
 export * from './brand/brand.component';
+export * from './card-layout/card-layout.component';
 export * from './dashboard-layout/dashboard-layout.component';
 export * from './navigation/navigation.component';
 export * from './navigation-bar/navigation-bar.component';

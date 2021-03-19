@@ -9,6 +9,8 @@ import { CornerType } from '../../../types/corner.type';
 export class SkImageComponent {
   @Input() src = '';
   @Input() alt = '';
+  @Input() width?: number | string;
+  @Input() height?: number | string;
   @Input() corner?: CornerType | string;
 
   defaultCorner?: CornerType | string;

@@ -1,11 +1,16 @@
 <input
-  class="input"
-  [ngClass]="state ? 'input--' + state : ''"
+  (ngModelChange)="onValueChange($event)"
+  [attr.disabled]="disabled ? 'disabled' : undefined"
   [attr.placeholder]="placeholder"
   [attr.required]="required ? 'required' : undefined"
-  [skAutofocus]="focus"
   [id]="fieldId"
-  [type]="type"
-  [attr.disabled]="disabled ? 'disabled' : undefined"
+  [ngClass]="state ? 'input--' + state : ''"
   [ngModel]="value"
-  (ngModelChange)="onValueChange($event)">
+  [skAutofocus]="focus"
+  [skCorner]="corner ? corner : defaultCorner"
+  [skPadding]="padding ? padding : defaultPadding"
+  [skTextMargin]="margin ? margin : defaultMargin"
+  [skTextSize]="size ? size : defaultSize"
+  [skWidth]="width ? width : defaultWidth"
+  [type]="type"
+  class="input">

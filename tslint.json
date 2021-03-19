@@ -118,6 +118,11 @@
         "check-typecast"
       ]
     },
+    "component-class-prefix": [
+      true,
+      "Sk",
+      "Stg"
+    ],
     "component-class-suffix": [
       true,
       "Component",

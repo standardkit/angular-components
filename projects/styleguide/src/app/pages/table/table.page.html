@@ -1,0 +1,83 @@
+<sk-title heading="1">sk-table</sk-title>
+<sk-divider></sk-divider>
+
+<sk-section>
+  <sk-title>HTML</sk-title>
+  <sk-paragraph>
+    <sk-highlight type="italic">table class table</sk-highlight>
+  </sk-paragraph>
+  <table class="table">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </table>
+</sk-section>
+<sk-divider></sk-divider>
+<sk-section>
+<sk-title>Striped</sk-title>
+  <sk-table [striped]="true">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+</sk-section>
+<sk-divider></sk-divider>
+<sk-section>
+  <sk-title>Sizes</sk-title>
+  <sk-table size="xs">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+  <sk-table size="s">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+  <sk-table>
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+  <sk-table size="l">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+  <sk-table size="xl">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+</sk-section>
+<sk-divider margin="vertical-l"></sk-divider>
+<sk-section>
+  <sk-title>Paddings</sk-title>
+  <sk-table padding="xs">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+  <sk-table padding="s">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+  <sk-table>
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+  <sk-table padding="l">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+  <sk-table padding="xl">
+    <ng-container *ngTemplateOutlet="data"></ng-container>
+  </sk-table>
+</sk-section>
+
+
+<ng-template #data>
+  <thead>
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Description</td>
+    <td>Actions</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>First</td>
+    <td>The primary object</td>
+    <td>Something</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Second item</td>
+    <td>Other</td>
+    <td>Something</td>
+  </tr>
+  </tbody>
+</ng-template>

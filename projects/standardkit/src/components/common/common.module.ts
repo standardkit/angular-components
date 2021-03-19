@@ -17,6 +17,7 @@ import { SkIconComponent } from './icon/icon.component';
 import { SkImageComponent } from './image/image.component';
 import { SkListItemComponent } from './list-item/list-item.component';
 import { SkListComponent } from './list/list.component';
+import { SkModalComponent } from './modal/modal.component';
 import { SkSpinnerComponent } from './spinner/spinner.component';
 
 const COMPONENTS = [
@@ -34,6 +35,7 @@ const COMPONENTS = [
   SkImageComponent,
   SkListComponent,
   SkListItemComponent,
+  SkModalComponent,
   SkSpinnerComponent
 ];
 

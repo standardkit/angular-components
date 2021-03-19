@@ -7,9 +7,14 @@ export const StgRoutes = {
   FIGURE: 'figure',
   HIGHLIGHT: 'highlight',
   IMAGE: 'image',
+  ICON: 'icon',
+  INPUT: 'input',
   LINK: 'link',
   LIST: 'list',
+  MODAL: 'modal',
   PARAGRAPH: 'paragraph',
+  SPINNER: 'spinner',
   SUBTITLE: 'subtitle',
-  TITLE: 'title'
+  TITLE: 'title',
+  TABLE: 'table'
 };

@@ -16,4 +16,5 @@ export * from './icon/icon.component';
 export * from './image/image.component';
 export * from './list/list.component';
 export * from './list-item/list-item.component';
+export * from './modal/modal.component';
 export * from './spinner/spinner.component';

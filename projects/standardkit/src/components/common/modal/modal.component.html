@@ -1,0 +1,29 @@
+<div (click)="onOutsideClick()" [skPadding]="padding ? padding : defaultPadding" class="modal__container">
+
+  <div
+    (click)="onModalClick($event)"
+    [skCorner]="corner ? corner : defaultCorner"
+    [skElevation]="elevation ? elevation : defaultElevation"
+    [skTextSize]="size ? size : defaultSize"
+    class="modal">
+
+    <sk-bar alignment="space-between">
+
+      <div [skPadding]="padding ? padding : defaultPadding" class="modal__header">
+        <ng-content select="[modal-header], [slot=header]"></ng-content>
+      </div>
+
+      <button (click)="onClose()" [skPadding]="padding ? padding : defaultPadding" aria-label="close"
+              class="modal__close">
+        <sk-icon type="close"></sk-icon><!--    TODO : make slottable -->
+      </button>
+    </sk-bar>
+
+    <div [skPadding]="padding ? padding : defaultPadding" class="modal__content">
+      <ng-content></ng-content>
+    </div>
+
+    <!--  todo: footer-->
+  </div>
+
+</div>

@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { SkDirectivesModule } from '../../directives/directives.module';
 import { SkCommonModule } from '../common/common.module';
 import { SkBrandComponent } from './brand/brand.component';
+import { SkCardLayoutComponent } from './card-layout/card-layout.component';
 import { SkDashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { SkNavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { SkNavigationItemComponent } from './navigation-item/navigation-item.component';
@@ -15,6 +16,7 @@ import { SkSpacerComponent } from './spacer/spacer.component';
 
 const COMPONENTS = [
   SkBrandComponent,
+  SkCardLayoutComponent,
   SkDashboardLayoutComponent,
   SkNavigationComponent,
   SkNavigationBarComponent,

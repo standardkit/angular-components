@@ -3,6 +3,7 @@ import { AlignmentType } from '../types/alignment.type';
 import { BorderPositionType } from '../types/border-position.type';
 import { BreakpointType } from '../types/breakpoint.type';
 import { CaseType } from '../types/case.type';
+import { ColorType } from '../types/color.type';
 import { CornerType } from '../types/corner.type';
 import { ElevationType } from '../types/elevation.type';
 import { FillType } from '../types/fill.type';
@@ -10,6 +11,7 @@ import { HighlightType } from '../types/highlight.type';
 import { PositionType } from '../types/position.type';
 import { SizeType } from '../types/size.type';
 import { VerticalPositionType } from '../types/vertical-position.type';
+import { WidthType } from '../types/width.type';
 import { SkIconMapConfiguration } from './icon-map.configuration';
 
 interface Padding {
@@ -103,6 +105,7 @@ export interface SkConfigurationInterface {
 
   // Layout
   navigationBar?: { color?: string; } & SizeConfiguration & Fill & Elevation & Extendable;
+  cardLayout?: Padding & Fill & Elevation & Corner & Margin & Size & Extendable;
 
   // Typography
   title?: Case & SizeConfiguration;
@@ -112,13 +115,14 @@ export interface SkConfigurationInterface {
 
   // Forms
   form?: FormConfiguration & Corner & Elevation;
+  formWidth?: WidthType | string;
   formField?: FormConfiguration & Corner & Elevation | {
     fullWidthUntil?: boolean; labelInline?: boolean;
     labelOffset?: number; labelColumns?: number;
     fieldOffset?: number; fieldColumns?: number;
   };
   label?: FormConfiguration;
-  input?: FormConfiguration & Corner & Elevation;
+  input?: FormConfiguration & Corner & Elevation & { width?: WidthType | string };
   select?: FormConfiguration & Corner & Elevation;
   textarea?: FormConfiguration & Corner & Elevation & { rows?: number; };
   formError?: FormConfiguration;
@@ -126,12 +130,13 @@ export interface SkConfigurationInterface {
   range?: SizeConfiguration & FullWidth;
   checkbox?: SizeConfiguration & Corner & Elevation;
   radio?: SizeConfiguration & Corner & Elevation;
-  inputGroup?: FormConfiguration & Corner & Elevation;
+  inputGroup?: FormConfiguration & Corner & Elevation & { width?: WidthType | string } & Extendable;
   datePicker?: FormConfiguration & Corner & Elevation;
   colorPicker?: FormConfiguration & Corner & Elevation;
   autocomplete?: SizeConfiguration & Corner & Elevation;
 
   // Tables
+  table?: Padding & Extendable;
 
   // Components
   alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string }
@@ -139,10 +144,13 @@ export interface SkConfigurationInterface {
   bar?: { alignment?: AlignmentType, position?: VerticalPositionType } & Extendable;
   badge?: { position?: PositionType; };
   button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
+  divider?: Margin & Extendable;
   loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   buttonGroup?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   progressBar?: SizeConfiguration & Case & Elevation & Corner & Fill & { mode?: string; };
   image?: Corner;
-  section?: Margin;
+  modal?: Padding & Extendable;
+  section?: Margin & Extendable;
   list?: Elevation & Corner;
+  spinner?: Size & Margin & { type?: ColorType | string } & Extendable;
 }

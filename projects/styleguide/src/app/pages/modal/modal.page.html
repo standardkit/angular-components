@@ -1,0 +1,29 @@
+<sk-title>sk-modal</sk-title>
+<sk-divider></sk-divider>
+
+<sk-section>
+  <sk-title>Click button to open modal</sk-title>
+  <sk-button (skClick)="open = true">Open Sesame</sk-button>
+</sk-section>
+
+
+<sk-modal (close)="open = false" *ngIf="open" [size]="size" [corner]="corner">
+  <sk-title margin="none" slot="header">Modal title</sk-title>
+  <sk-paragraph>I am inside the modal</sk-paragraph>
+  <sk-subtitle>Size</sk-subtitle>
+  <sk-button (skClick)="size='xs'">XS</sk-button>
+  <sk-button (skClick)="size='s'">S</sk-button>
+  <sk-button (skClick)="size='m'">M</sk-button>
+  <sk-button (skClick)="size='l'">L</sk-button>
+  <sk-button (skClick)="size='xl'">XL</sk-button>
+
+  <sk-subtitle>Corner</sk-subtitle>
+  <sk-button (skClick)="corner='sharp'">SHARP</sk-button>
+  <sk-button (skClick)="corner='xxs'">XXS</sk-button>
+  <sk-button (skClick)="corner='xs'">XS</sk-button>
+  <sk-button (skClick)="corner='s'">S</sk-button>
+  <sk-button (skClick)="corner='m'">M</sk-button>
+  <sk-button (skClick)="corner='l'">L</sk-button>
+  <sk-button (skClick)="corner='xl'">XL</sk-button>
+  <sk-button (skClick)="corner='xxl'">XXL</sk-button>
+</sk-modal>
