@@ -1,3 +1,3 @@
-import { SizeType } from '@standardkit/angular-components';
+import { SizeType } from './size.type';
 
 export type WidthType = SizeType | 'full';
