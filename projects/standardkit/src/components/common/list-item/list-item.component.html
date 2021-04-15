@@ -1,9 +1,9 @@
+<!--  [skType]="{'list-item&#45;&#45;', [type, defaultType]}"-->
 <div
   class="list-item"
   [ngClass]="type ? 'list-item--' + type : ''"
   [skFill]="fill">
-  <span *ngIf="!isInitialized || hasIconContent" #icon
-        class="list-item__icon" [ngClass]="alignIcon ? ' list-item__icon--' + alignIcon : ''">
+  <span *ngIf="!isInitialized || hasIconContent" #icon class="list-item__icon" [skPosition]="[position, defaultPosition]">
     <ng-content select="[sk-list-item-icon],[slot=icon]"></ng-content>
   </span>
 

@@ -1,31 +1,31 @@
 <ng-container [ngSwitch]="heading">
   <h1 *ngSwitchCase="1" class="title" [ngClass]="type ? 'title--' + type : ''"
-      [skTextMargin]="margin ? margin : defaultMargin">
+      [skMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h1>
 
   <h2 *ngSwitchCase="2" class="title" [ngClass]="type ? 'title--' + type : ''"
-      [skTextMargin]="margin ? margin : defaultMargin">
+      [skMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h2>
 
   <h3 *ngSwitchCase="3" class="title" [ngClass]="type ? 'title--' + type : ''"
-      [skTextMargin]="margin ? margin : defaultMargin">
+      [skMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h3>
 
   <h4 *ngSwitchCase="4" class="title" [ngClass]="type ? 'title--' + type : ''"
-      [skTextMargin]="margin ? margin : defaultMargin">
+      [skMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h4>
 
   <h5 *ngSwitchCase="5" class="title" [ngClass]="type ? 'title--' + type : ''"
-      [skTextMargin]="margin ? margin : defaultMargin">
+      [skMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h5>
 
   <h6 *ngSwitchCase="6" class="title" [ngClass]="type ? 'title--' + type : ''"
-      [skTextMargin]="margin ? margin : defaultMargin">
+      [skMargin]="margin ? margin : defaultMargin">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </h6>
 </ng-container>

@@ -2,9 +2,10 @@
   [ngClass]="type ? 'alert--' + type : defaultType ? 'alert--' + defaultType : ''"
   [skCorner]="corner ? corner : defaultCorner"
   [skFill]="fill ? fill : defaultFill"
+  [skColor]="type ? type : defaultType"
   [skPadding]="padding ? padding : defaultPadding"
-  [skTextMargin]="margin ? margin : defaultMargin"
-  [skTextSize]="size ? size : defaultSize"
+  [skMargin]="margin ? margin : defaultMargin"
+  [skSize]="size ? size : defaultSize"
   class="alert">
 
   <div #icon *ngIf="!isInitialized || hasIconContent"

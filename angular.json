@@ -67,6 +67,7 @@
               "projects/styleguide/src/assets"
             ],
             "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "projects/styleguide/src/styles.scss"
             ],
             "scripts": []

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { SkAlignmentDirective } from './alignment.directive';
 import { SkAutofocusDirective } from './autofocus.directive';
 import { SkCaseDirective } from './case.directive';
 import { SkColorDirective } from './color.directive';
@@ -9,12 +10,15 @@ import { SkFullWidthDirective } from './full-width.directive';
 import { SkInputDirective } from './input.directive';
 import { SkMarginDirective } from './margin.directive';
 import { SkPaddingDirective } from './padding.directive';
-import { SkTextMarginDirective } from './text-margin.directive';
-import { SkTextSizeDirective } from './text-size.directive';
+import { SkPositionDirective } from './position.directive';
+import { SkSizeDirective } from './size.directive';
+import { SkVerticalAlignmentDirective } from './vertical-alignment.directive';
 import { SkWidthDirective } from './width.directive';
 
 const DIRECTIVES = [
   SkAutofocusDirective,
+  SkAlignmentDirective,
+  SkVerticalAlignmentDirective,
   SkCaseDirective,
   SkColorDirective,
   SkCornerDirective,
@@ -24,8 +28,9 @@ const DIRECTIVES = [
   SkInputDirective,
   SkMarginDirective,
   SkPaddingDirective,
-  SkTextMarginDirective,
-  SkTextSizeDirective,
+  SkPositionDirective,
+  SkMarginDirective,
+  SkSizeDirective,
   SkWidthDirective
 ];
 

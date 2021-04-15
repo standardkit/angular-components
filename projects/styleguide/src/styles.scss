@@ -1,12 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+$log-level: all;
 
-@import "~@fortawesome/fontawesome-free/css/all.min.css";
-
-@import "~@standardkit/styles/scss/themes/default/fonts";
-//@import "~@standardkit/styles/scss/themes/dark/colors";
-
-$colors: (
-  custom: hotpink
+$themes: (
+  default: (
+    modifiers: (
+      color: (custom: hotpink)
+    ),
+    components: (
+      button: (default-color: custom2)
+    )
+  )
 );
 
-@import "~@standardkit/styles/scss/style";
+@use "~@standardkit/styles/scss" as standardkit with ($themes: $themes);
