@@ -3,7 +3,11 @@
   class="list-item"
   [ngClass]="type ? 'list-item--' + type : ''"
   [skFill]="fill">
-  <span *ngIf="!isInitialized || hasIconContent" #icon class="list-item__icon" [skPosition]="[position, defaultPosition]">
+  <span
+    *ngIf="!isInitialized || hasIconContent"
+    #icon
+    class="list-item__icon"
+    [skPosition]="position ? position : defaultPosition">
     <ng-content select="[sk-list-item-icon],[slot=icon]"></ng-content>
   </span>
 

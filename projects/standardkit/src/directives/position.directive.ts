@@ -1,19 +1,14 @@
 import { Directive, HostBinding, Input } from '@angular/core';
+import { VerticalPositionType } from '../types/vertical-position.type';
 
 @Directive({
   selector: '[skPosition]'
 })
 export class SkPositionDirective {
-  @Input() skPosition: (string | undefined | null)[] = [];
+  @Input() skPosition?: VerticalPositionType | string;
 
   @HostBinding('class')
   get class(): string {
-
-    for (const value in this.skPosition) {
-      if (value !== null && value !== undefined) {
-        return 'position--' + value;
-      }
-    }
-    return '';
+    return this.skPosition ? 'position--' + this.skPosition : '';
   }
 }

@@ -51,7 +51,7 @@ interface Margin {
 }
 
 interface Position {
-  margin?: VerticalPositionType | string;
+  position?: VerticalPositionType | string;
 }
 
 interface Extendable {
@@ -150,7 +150,7 @@ export interface SkConfigurationInterface {
 
   // Components
   alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string }
-    & Fill & SizeConfiguration & FullWidth & Corner;
+    & Fill & SizeConfiguration & Corner & { alignIcon?: VerticalPositionType | string, alignDismiss?: VerticalPositionType | string };
   bar?: { alignment?: AlignmentType | string, verticalAlignment?: VerticalPositionType | string } & Extendable;
   badge?: { position?: PositionType; };
   button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & Color & { type?: string; };

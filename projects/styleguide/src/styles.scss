@@ -1,14 +1,4 @@
-$log-level: all;
-
-$themes: (
-  default: (
-    modifiers: (
-      color: (custom: hotpink)
-    ),
-    components: (
-      button: (default-color: custom2)
-    )
-  )
+@use "~@standardkit/styles/scss" with (
+$color-map: (custom: hotpink),
+$log-level: all
 );
-
-@use "~@standardkit/styles/scss" as standardkit with ($themes: $themes);

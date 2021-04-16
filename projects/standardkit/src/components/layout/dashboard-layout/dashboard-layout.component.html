@@ -1,4 +1,4 @@
-<div [ngClass]="'dashboard-layout__expand--' + collapsedUntil" class="dashboard-layout">
+<div class="dashboard-layout" [class.dashboard-layout--expand]="isExpanded">
 
   <ng-content select="sk-navigation-bar,[sk-dashboard-layout-header],[slot=header]"></ng-content>
 

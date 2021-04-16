@@ -14,7 +14,8 @@
   </div>
 
   <div *ngIf="isInitialized && !hasIconContent && (hasIcon || hasIcon === undefined && defaultHasIcon)"
-       [ngClass]="alignIcon ? ' alert__icon--' + alignIcon : ''" class="alert__icon">
+       [skPosition]="alignIcon ? alignIcon : defaultAlignIcon"
+       class="alert__icon">
     <sk-icon [icon]="icon" [type]="type ? type : defaultType ? defaultType : 'info'"></sk-icon>
   </div>
 
@@ -29,8 +30,8 @@
   </div>
 
   <div (click)="onDismiss()"
+       [skPosition]="alignDismiss ? alignDismiss : defaultAlignDismiss"
        *ngIf="isInitialized && !hasDismissContent && (dismissable || dismissable === undefined && defaultDismissable)"
-       [ngClass]="alignDismiss ? 'alert__dismiss--' + alignDismiss : ''"
        class="alert__dismiss">
     <sk-icon [icon]="dismissIcon" type="close"></sk-icon>
   </div>
