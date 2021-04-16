@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SkConfigurationService } from '../../../configuration/configuration.service';
 import { CornerType } from '../../../types/corner.type';
 import { FillType } from '../../../types/fill.type';
@@ -9,8 +9,6 @@ import { SizeType } from '../../../types/size.type';
   templateUrl: 'card-layout.component.html'
 })
 export class SkCardLayoutComponent {
-  @HostBinding('class') class = 'card-layout__container';
-
   @Input() fill?: FillType | string;
   @Input() margin?: SizeType | string;
   @Input() padding?: SizeType | string;

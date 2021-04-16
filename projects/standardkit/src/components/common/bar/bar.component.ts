@@ -9,14 +9,14 @@ import { VerticalPositionType } from '../../../types/vertical-position.type';
 })
 export class SkBarComponent {
   @Input() alignment?: AlignmentType | string;
-  @Input() position?: VerticalPositionType | string;
+  @Input() verticalAlignment?: VerticalPositionType | string;
 
   defaultAlignment?: AlignmentType | string;
-  defaultPosition?: VerticalPositionType | string;
+  defaultVerticalAlignment?: VerticalPositionType | string;
 
   constructor(private configurationService: SkConfigurationService) {
     const configuration = configurationService.get();
     this.defaultAlignment = configuration?.bar?.alignment;
-    this.defaultPosition = configuration?.bar?.position;
+    this.defaultVerticalAlignment = configuration?.bar?.verticalAlignment;
   }
 }

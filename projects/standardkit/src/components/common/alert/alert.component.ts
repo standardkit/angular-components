@@ -1,3 +1,4 @@
+import { Position } from '@angular/compiler';
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { SkConfigurationService } from '../../../configuration/configuration.service';
 import { AlertLevelType } from '../../../types/alert-level.type';
@@ -27,6 +28,7 @@ export class SkAlertComponent implements AfterViewInit {
   @Input() padding?: SizeType | string;
   @Input() size?: SizeType | string;
   @Input() corner?: CornerType | string;
+  @Input() position?: VerticalPositionType | string;
 
   @Output() dismiss: EventEmitter<void> = new EventEmitter<void>();
 
@@ -39,6 +41,8 @@ export class SkAlertComponent implements AfterViewInit {
   defaultPadding?: SizeType | string;
   defaultSize?: SizeType | string;
   defaultCorner?: CornerType | string;
+  defaultAlignDismiss?: VerticalPositionType | string;
+  defaultAlignIcon?: VerticalPositionType | string;
 
   isInitialized = false;
   hasIconContent = false;
@@ -54,6 +58,8 @@ export class SkAlertComponent implements AfterViewInit {
     this.defaultPadding = configuration?.alert?.padding ?? configuration?.padding;
     this.defaultSize = configuration?.alert?.size ?? configuration?.size;
     this.defaultCorner = configuration?.alert?.corner ?? configuration?.corner;
+    this.defaultAlignDismiss = configuration?.alert?.alignDismiss ?? configuration?.position;
+    this.defaultAlignIcon = configuration?.alert?.alignIcon ?? configuration?.position;
   }
 
   ngAfterViewInit(): void {

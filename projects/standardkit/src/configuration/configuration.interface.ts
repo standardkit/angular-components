@@ -38,12 +38,20 @@ interface Corner {
   corner?: CornerType | string;
 }
 
+interface Color {
+  color?: ColorType | string;
+}
+
 interface Elevation {
   elevation?: ElevationType | string;
 }
 
 interface Margin {
   margin?: SizeType | string;
+}
+
+interface Position {
+  position?: VerticalPositionType | string;
 }
 
 interface Extendable {
@@ -75,6 +83,8 @@ export interface SkConfigurationInterface {
   borderSize?: SizeType | string;
 
   corner?: CornerType | string;
+  color?: ColorType | string;
+  position?: VerticalPositionType | string;
 
   colors?: {
     title?: string;
@@ -140,10 +150,10 @@ export interface SkConfigurationInterface {
 
   // Components
   alert?: { hasIcon?: boolean; dismissable?: boolean; disabled?: boolean; type?: AlertLevelType | string }
-    & Fill & SizeConfiguration & FullWidth & Corner;
-  bar?: { alignment?: AlignmentType, position?: VerticalPositionType } & Extendable;
+    & Fill & SizeConfiguration & Corner & { alignIcon?: VerticalPositionType | string, alignDismiss?: VerticalPositionType | string };
+  bar?: { alignment?: AlignmentType | string, verticalAlignment?: VerticalPositionType | string } & Extendable;
   badge?: { position?: PositionType; };
-  button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
+  button?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & Color & { type?: string; };
   divider?: Margin & Extendable;
   loadButton?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
   buttonGroup?: SizeConfiguration & FullWidth & Case & Elevation & Corner & Fill & { type?: string; };
@@ -152,5 +162,6 @@ export interface SkConfigurationInterface {
   modal?: Padding & Extendable;
   section?: Margin & Extendable;
   list?: Elevation & Corner;
+  listItem?: Position & Extendable;
   spinner?: Size & Margin & { type?: ColorType | string } & Extendable;
 }

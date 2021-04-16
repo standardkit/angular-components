@@ -13,7 +13,7 @@ import { SizeType } from '../../../types/size.type';
 export class SkButtonComponent {
   @Input() disabled = false;
   @Input() isSubmit = false;
-  @Input() type?: ColorType | string;
+  @Input() color?: ColorType | string;
   @Input() fill?: FillType | string;
   @Input() size?: SizeType | string;
   @Input() margin?: SizeType | string;
@@ -31,7 +31,7 @@ export class SkButtonComponent {
   defaultCorner?: CornerType | string;
   defaultElevation?: ElevationType | string;
   defaultSize?: SizeType | string;
-  defaultType?: ColorType | string;
+  defaultColor?: ColorType | string;
 
   constructor(private configurationService: SkConfigurationService) {
     const configuration = configurationService.get();
@@ -39,8 +39,7 @@ export class SkButtonComponent {
     this.defaultSize = configuration?.button?.size ?? configuration?.size;
     this.defaultMargin = configuration?.button?.margin ?? configuration?.margin;
     this.defaultPadding = configuration?.button?.padding ?? configuration?.padding;
-    this.defaultFullWidth = configuration?.button?.fullWidth;
-    this.defaultType = configuration?.button?.type;
+    this.defaultColor = configuration?.button?.color ?? configuration?.color;
     this.defaultCorner = configuration?.button?.corner ?? configuration?.corner;
     this.defaultElevation = configuration?.button?.elevation ?? configuration?.elevation;
   }

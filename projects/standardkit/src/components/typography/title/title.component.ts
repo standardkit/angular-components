@@ -12,6 +12,8 @@ export class SkTitleComponent {
   @Input() type!: string;
   @Input() margin?: SizeType | string;
 
+  // TODO : Add size modifier for title and subtitle component
+
   defaultMargin?: SizeType | string;
 
   constructor(private configurationService: SkConfigurationService) {

@@ -1,5 +1,7 @@
 <div
-  [ngClass]="alignment ? 'bar--' + alignment : defaultAlignment ? 'bar--'+ defaultAlignment : ''"
-  class="bar{{ position ? ' position--' + position : defaultPosition ? ' position--' + defaultPosition : '' }}">
+  class="bar"
+  [skAlignment]="alignment ? alignment : defaultAlignment"
+  [skVerticalAlignment]="verticalAlignment ? verticalAlignment : defaultVerticalAlignment">
   <ng-content></ng-content>
 </div>
+

@@ -2,14 +2,14 @@ import { Directive, HostBinding, Input } from '@angular/core';
 import { SizeType } from '../types/size.type';
 
 @Directive({
-  selector: '[skTextSize]'
+  selector: '[skSize]'
 })
-export class SkTextSizeDirective {
-  @Input() skTextSize?: SizeType | string;
+export class SkSizeDirective {
+  @Input() skSize?: SizeType | string;
 
   @HostBinding('class')
   get class(): string {
-    return this.skTextSize ? 'text-size--' + this.skTextSize : '';
+    return this.skSize ? 'size--' + this.skSize : '';
   }
 }
 
