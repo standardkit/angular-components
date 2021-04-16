@@ -19,7 +19,7 @@ import { StyleguideComponent } from './styleguide.component';
       iconSet: 'font-awesome',
       iconMap: {custom: 'bug'},
       alert: {hasIcon: true},
-      divider: {margin: 'vertical-xl'}
+      button: {margin: 'xxs'}
     })
   ],
   bootstrap: [

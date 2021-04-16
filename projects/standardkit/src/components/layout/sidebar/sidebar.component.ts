@@ -6,7 +6,7 @@ import { SkNavigationComponent } from '../navigation/navigation.component';
   templateUrl: 'sidebar.component.html'
 })
 export class SkSidebarComponent implements AfterContentInit {
-  @HostBinding('class') class = 'sidebar__container';
+  @HostBinding('class') class = 'sidebar';
 
   @ContentChildren(SkNavigationComponent) navigations!: QueryList<SkNavigationComponent>;
 

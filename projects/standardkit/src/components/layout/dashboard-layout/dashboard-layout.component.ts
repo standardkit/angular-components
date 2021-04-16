@@ -1,5 +1,4 @@
 import { AfterContentInit, Component, ContentChild, Input } from '@angular/core';
-import { BreakpointType } from '../../../types/breakpoint.type';
 import { SkNavigationBarComponent } from '../navigation-bar/navigation-bar.component';
 import { SkSidebarComponent } from '../sidebar/sidebar.component';
 
@@ -12,7 +11,6 @@ export class SkDashboardLayoutComponent implements AfterContentInit {
   @ContentChild(SkSidebarComponent) sidebar?: SkSidebarComponent;
 
   @Input() sticky?: boolean;
-  @Input() collapsedUntil?: BreakpointType | string = 'm';
 
   isExpanded = false;
 
